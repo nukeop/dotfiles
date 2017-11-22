@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+
+from subprocess import *
+
+def main():
+	process = Popen(['windscribe', 'status'], stdout=PIPE)
+	out = process.communicate()[0].decode('utf-8').split('\n')[1]
+	if 'DISCONNECTED' in out:
+		out = '#[fg=black,bg=red]' + out + '#[default]'
+	else:
+		out = '#[fg=black,bg=green]' + out + '#[default]'
+	print(out)
+
+if __name__=='__main__':
+	main()
