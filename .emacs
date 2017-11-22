@@ -5,10 +5,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default)))
+    ("b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "4137af91ea70f2b3ba0f5dee69899f2c81be463c54d931179d2e5038c4947d36" "2affeafce8e8bf5803ccce901f779f95d0b0ac122145efee753baa4af4d73e26" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default)))
  '(package-selected-packages
    (quote
-    (emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))))
+    (react-snippets yasnippet ac-anaconda emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -16,11 +16,14 @@
  ;; If there is more than one, they won't work right.
  )
 
+
 (require 'cl)
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (defvar alsw/mypackages '(
 			  ag
@@ -40,12 +43,12 @@
 			  bind-key
 			  popwin
 			  json-mode
+			  autothemer
 			  rainbow-mode
 			  gotham-theme
-			  kaolin-themes
-			  emmet-mode
-			  csharp-mode
-			  smartparens
+			  emmet-mode			  
+			  yasnippet
+			  react-snippets
 			  ))
 
 (defun alsw/packages-installed-p ()
@@ -76,6 +79,7 @@
  coding-system-for-read 'utf-8
  coding-system-for-write 'utf-8
  default-fill-column 80
+ js2-basic-offset 2
  )
 
 (delete-selection-mode t)
@@ -88,8 +92,11 @@
 (global-linum-mode 1)
 (setq linum-format "%4d \u2502 ")
 
+(require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
+(setq ac-disable-faces nil)
+
 
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
@@ -118,10 +125,14 @@
 (which-key-mode 1)
 
 (require 'emmet-mode)
+(require 'web-mode)
 (setq js2-basic-offset 2)
 (setq web-mode-enable-css-colorization t)
 (setq web-mode-enable-block-face t)
 (setq web-mode-enable-part-face t)
+
+(add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . web-mode))
 
 (defun my-web-mode-hook ()
   "Hooks for Web mode. Adjust indents"
@@ -133,14 +144,24 @@
   (rainbow-mode 1)
   )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
+
+(require 'kaolin-themes)
+
 (load-theme 'kaolin-ocean)
+
+(require 'react-snippets)
 
 (defun my-rjsx-mode-hook ()
   (emmet-mode 1)
   (smartparens-mode 1)
-
-  )
+  (setq js2-basic-offset 2)
+  (auto-complete-mode 1)
+  (add-to-list 'ac-sources 'ac-source-filename)
+)
 
 (add-hook 'rjsx-mode-hook 'my-rjsx-mode-hook)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
+
+(when (window-system)
+  (set-default-font "Fira Code"))
