@@ -163,5 +163,11 @@
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
+(defun my-python-mode-hook ()
+  (auto-fill-mode 1)
+  (set-fill-column 79)
+  )
+(add-hook 'python-mode-hook 'my-python-mode-hook)
+
 (when (window-system)
   (set-default-font "Fira Code"))
