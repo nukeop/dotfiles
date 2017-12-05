@@ -91,6 +91,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-linum-mode 1)
 (setq linum-format "%4d \u2502 ")
+(setq column-number-mode t)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
