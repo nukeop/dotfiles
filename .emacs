@@ -5,10 +5,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "4137af91ea70f2b3ba0f5dee69899f2c81be463c54d931179d2e5038c4947d36" "2affeafce8e8bf5803ccce901f779f95d0b0ac122145efee753baa4af4d73e26" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default)))
+    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "4137af91ea70f2b3ba0f5dee69899f2c81be463c54d931179d2e5038c4947d36" "2affeafce8e8bf5803ccce901f779f95d0b0ac122145efee753baa4af4d73e26" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default)))
  '(package-selected-packages
    (quote
-    (react-snippets yasnippet ac-anaconda emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))))
+    (highlight-parentheses rainbow-delimiters anaconda-mode solarized-theme react-snippets yasnippet ac-anaconda emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -27,28 +27,30 @@
 
 (defvar alsw/mypackages '(
 			  ag
+			  anaconda-mode
 			  auto-complete
+			  autothemer
+			  bind-key
+			  emmet-mode
 			  flycheck
+			  gotham-theme
+			  helm
+			  helm-projectile
+			  js2-mode
+			  json-mode
 			  magit
 			  markdown-mode
 			  neotree
-			  projectile
-			  helm
-			  helm-projectile
-			  web-mode
-			  js2-mode
-			  rjsx-mode
 			  popup
-			  which-key
-			  bind-key
 			  popwin
-			  json-mode
-			  autothemer
+			  projectile
+			  rainbow-delimiters
 			  rainbow-mode
-			  gotham-theme
-			  emmet-mode			  
-			  yasnippet
 			  react-snippets
+			  rjsx-mode
+			  web-mode
+			  which-key
+			  yasnippet
 			  ))
 
 (defun alsw/packages-installed-p ()
@@ -91,7 +93,6 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-linum-mode 1)
 (setq linum-format "%4d \u2502 ")
-(setq column-number-mode t)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
@@ -135,8 +136,15 @@
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . web-mode))
 
+(defun common-hook ()
+  "Common for all modes."
+  (rainbow-delimiters-mode 1)
+  (show-paren-mode 1)
+  )
+
 (defun my-web-mode-hook ()
-  "Hooks for Web mode. Adjust indents"
+  "Hooks for Web mode. Adjust indents."
+  (common-hook)
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-attr-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
@@ -153,22 +161,24 @@
 (require 'react-snippets)
 
 (defun my-rjsx-mode-hook ()
+  "Hook for RJSX mode (React)."
+  (common-hook)
   (emmet-mode 1)
   (smartparens-mode 1)
   (setq js2-basic-offset 2)
   (auto-complete-mode 1)
   (add-to-list 'ac-sources 'ac-source-filename)
-)
+  )
 
 (add-hook 'rjsx-mode-hook 'my-rjsx-mode-hook)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
 (defun my-python-mode-hook ()
-  (auto-fill-mode 1)
-  (set-fill-column 79)
+  "Hook for python mode."
+  (common-hook)
+  (anaconda-mode 1)
   )
-(add-hook 'python-mode-hook 'my-python-mode-hook)
 
 (when (window-system)
-  (set-default-font "Fira Code"))
+  (set-frame-font "Hack"))
