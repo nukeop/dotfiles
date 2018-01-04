@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "4137af91ea70f2b3ba0f5dee69899f2c81be463c54d931179d2e5038c4947d36" "2affeafce8e8bf5803ccce901f779f95d0b0ac122145efee753baa4af4d73e26" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default)))
+    ("2e2ecba9a216bc734276a0642def5fccec44ee1facb4b6562a74e7fdcd5db997" "628cc301749fc392d32c26ba913402967a17d9f44c0a2b5e4c77850b50b5588b" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "4137af91ea70f2b3ba0f5dee69899f2c81be463c54d931179d2e5038c4947d36" "2affeafce8e8bf5803ccce901f779f95d0b0ac122145efee753baa4af4d73e26" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default)))
  '(package-selected-packages
    (quote
     (highlight-parentheses rainbow-delimiters anaconda-mode solarized-theme react-snippets yasnippet ac-anaconda emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))))
@@ -133,7 +133,9 @@
 (setq web-mode-enable-css-colorization t)
 (setq web-mode-enable-block-face t)
 (setq web-mode-enable-part-face t)
+(setq web-mode-enable-current-element-highlight t)
 
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . web-mode))
 
@@ -144,7 +146,7 @@
   )
 
 (defun my-web-mode-hook ()
-  "Hooks for Web mode. Adjust indents."
+  "Hooks for Web mode."
   (common-hook)
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-attr-indent-offset 2)
@@ -152,6 +154,7 @@
   (setq web-mode-code-indent-offset 2)
   (setq css-indent-offset 2)
   (rainbow-mode 1)
+  (set-face-background 'web-mode-current-element-highlight-face "khaki1")
   )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
@@ -182,4 +185,4 @@
   )
 
 (when (window-system)
-  (set-frame-font "Hack"))
+  (set-frame-font "Terminus"))
