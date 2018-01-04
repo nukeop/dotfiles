@@ -19,8 +19,12 @@
 
 (require 'cl)
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+                    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  (when (< emacs-major-version 24)
+    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
@@ -48,6 +52,7 @@
 			  rainbow-mode
 			  react-snippets
 			  rjsx-mode
+			  wakatime-mode
 			  web-mode
 			  which-key
 			  yasnippet
@@ -110,8 +115,8 @@
 		      (let ((fit-window-to-buffer-horizontally t))
 			(fit-window-to-buffer)))))
 
-
 (global-flycheck-mode)
+(global-wakatime-mode)
 
 (require 'helm)
 (require 'helm-config)
@@ -186,3 +191,5 @@
 
 (when (window-system)
   (set-frame-font "Terminus"))
+
+(custom-set-variables '(wakatime-api-key ""))
