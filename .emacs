@@ -144,6 +144,9 @@
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . web-mode))
 
+(require 'yasnippet)
+(yas-global-mode 1)
+
 (defun common-hook ()
   "Common for all modes."
   (rainbow-delimiters-mode 1)
