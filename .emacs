@@ -196,3 +196,5 @@
   (set-frame-font "Terminus"))
 
 (custom-set-variables '(wakatime-api-key ""))
+
+(load-file "./.emacs.d/yas.el")
