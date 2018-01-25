@@ -42,6 +42,7 @@
 			  helm-projectile
 			  js2-mode
 			  json-mode
+			  lua-mode
 			  magit
 			  markdown-mode
 			  neotree
