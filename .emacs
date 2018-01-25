@@ -187,6 +187,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
+(add-to-list 'auto-mode-alist '("\\.lk12\\'". lua-mode))
+
 (defun my-python-mode-hook ()
   "Hook for python mode."
   (common-hook)
