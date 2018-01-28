@@ -35,6 +35,7 @@
 			  auto-complete
 			  autothemer
 			  bind-key
+			  css-comb
 			  emmet-mode
 			  flycheck
 			  gotham-theme
