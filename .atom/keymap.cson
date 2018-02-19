@@ -1,0 +1,6 @@
+'atom-text-editor:not([mini])':
+  '!unbind': 'editor:join-lines'
+  'ctrl-e': 'emmet:expand-abbreviation'
+
+'body':
+  'alt-x': 'command-palette:toggle'
