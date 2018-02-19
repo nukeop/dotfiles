@@ -1,6 +1,7 @@
 'atom-text-editor:not([mini])':
   '!unbind': 'editor:join-lines'
   'ctrl-e': 'emmet:expand-abbreviation'
+  'tab': 'auto-indent'
 
 'body':
   'alt-x': 'command-palette:toggle'
