@@ -4,11 +4,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("2e2ecba9a216bc734276a0642def5fccec44ee1facb4b6562a74e7fdcd5db997" "628cc301749fc392d32c26ba913402967a17d9f44c0a2b5e4c77850b50b5588b" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "4137af91ea70f2b3ba0f5dee69899f2c81be463c54d931179d2e5038c4947d36" "2affeafce8e8bf5803ccce901f779f95d0b0ac122145efee753baa4af4d73e26" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default)))
+   '("5b388add509c423e4ac275668662486628690e7ffe0050998615fc4c3669c16c" "0ca5a450034c92069769e071e63a3d2b2346c304bf186245467f59d993f5b979" "50b66fad333100cc645a27ada899a7b1d44f1ceb32140ab8e88fedabfb7d0daf" "473c69b2e448e37861e2051f793a8981ac419cc06ac66b2be6c08fddcf898175" "107693012b59b3a94faa869756333b8fe7224670f762ce97eb1dda89f03f5bcd" "7f6796a9b925f727bbe1781dc65f7f23c0aa4d4dc19613aa3cf96e41a96651e4" "e6370c4899d463555a6aecf2da2700e2e039f93273212ce1836e9f94ad4af278" "2e2ecba9a216bc734276a0642def5fccec44ee1facb4b6562a74e7fdcd5db997" "628cc301749fc392d32c26ba913402967a17d9f44c0a2b5e4c77850b50b5588b" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "4137af91ea70f2b3ba0f5dee69899f2c81be463c54d931179d2e5038c4947d36" "2affeafce8e8bf5803ccce901f779f95d0b0ac122145efee753baa4af4d73e26" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default))
+ '(kaolin-hl-line-colored t)
  '(package-selected-packages
-   (quote
-    (highlight-parentheses rainbow-delimiters anaconda-mode solarized-theme react-snippets yasnippet ac-anaconda emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))))
+   '(highlight-parentheses rainbow-delimiters anaconda-mode solarized-theme react-snippets yasnippet ac-anaconda emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))
+ '(wakatime-api-key "8cd859f5-19fe-426b-a98b-d76b016e5401")
+ '(wakatime-cli-path "/usr/local/bin/wakatime")
+ '(wakatime-python-bin nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -35,7 +37,6 @@
 			  auto-complete
 			  autothemer
 			  bind-key
-			  css-comb
 			  emmet-mode
 			  flycheck
 			  gotham-theme
@@ -76,6 +77,10 @@
 (unless (server-running-p)
   (server-start))
 
+(require 'kaolin-themes)
+(load-theme 'kaolin-ocean)
+
+(require 'rjsx-mode)
 (setq
  initial-scratch-message ""
  inhibit-startup-message t
@@ -89,7 +94,10 @@
  coding-system-for-write 'utf-8
  default-fill-column 80
  js2-basic-offset 2
- )
+ js-indent-level 2
+ sgml-basic-offset 2
+ sgml-attribute-offset 1
+)
 
 (delete-selection-mode t)
 (blink-cursor-mode t)
@@ -136,7 +144,6 @@
 
 (require 'emmet-mode)
 (require 'web-mode)
-(setq js2-basic-offset 2)
 (setq web-mode-enable-css-colorization t)
 (setq web-mode-enable-block-face t)
 (setq web-mode-enable-part-face t)
@@ -168,10 +175,6 @@
   )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
-(require 'kaolin-themes)
-
-(load-theme 'kaolin-ocean)
-
 (require 'react-snippets)
 
 (defun my-rjsx-mode-hook ()
@@ -179,7 +182,6 @@
   (common-hook)
   (emmet-mode 1)
   (smartparens-mode 1)
-  (setq js2-basic-offset 2)
   (auto-complete-mode 1)
   (add-to-list 'ac-sources 'ac-source-filename)
   )
@@ -188,6 +190,11 @@
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
+(defun my-lua-mode-hook ()
+  "Hook for lua mode."
+  (common-hook)
+  (setq lua-indent-level 2)
+  )
 (add-to-list 'auto-mode-alist '("\\.lk12\\'". lua-mode))
 
 (defun my-python-mode-hook ()
@@ -197,8 +204,10 @@
   )
 
 (when (window-system)
-  (set-frame-font "Terminus"))
+  (set-frame-font "Hack")
+  (set-face-attribute 'default nil :family "Hack" :height 130)
+  )
 
-(custom-set-variables '(wakatime-api-key ""))
+
 
 (load-file "./.emacs.d/yas.el")
