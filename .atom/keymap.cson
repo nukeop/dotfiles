@@ -10,4 +10,8 @@
   'ctrl-w': 'core:cut'
   'ctrl-y': 'core:paste'
   'ctrl-x ctrl-s': 'core:save'
+  'ctrl-x 2': 'pane:split-down-and-copy-active-item'
+  'ctrl-x 3': 'pane:split-right-and-copy-active-item'
+  'ctrl-x 0': 'core:close'
+  'ctrl-x o': 'window:focus-next-pane'
   'alt-x': 'command-palette:toggle'
