@@ -1,5 +1,6 @@
 'atom-text-editor:not([mini])':
   'ctrl-j': 'emmet:expand-abbreviation'
+  'ctrl-x h': 'core:select-all'
   'tab': 'editor:auto-indent'
 
 'body':
@@ -9,9 +10,13 @@
   'alt-w': 'core:copy'
   'ctrl-w': 'core:cut'
   'ctrl-y': 'core:paste'
+  'ctrl-g': 'core:cancel'
   'ctrl-x ctrl-s': 'core:save'
   'ctrl-x 2': 'pane:split-down-and-copy-active-item'
   'ctrl-x 3': 'pane:split-right-and-copy-active-item'
-  'ctrl-x 0': 'core:close'
+  'ctrl-x 0': 'pane:close'
+  'ctrl-x k': 'core:close'
   'ctrl-x o': 'window:focus-next-pane'
+  'ctrl-x ctrl-c': 'application:quit'
+  'ctrl-x ctrl-f': 'application:open-file'
   'alt-x': 'command-palette:toggle'
