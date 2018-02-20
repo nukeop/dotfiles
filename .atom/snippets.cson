@@ -51,3 +51,7 @@
       }
     }
     """
+
+  'String formatting':
+    'prefix': 'sform'
+    'body': '`${}`'
