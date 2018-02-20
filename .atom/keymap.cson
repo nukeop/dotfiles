@@ -1,7 +1,13 @@
 'atom-text-editor:not([mini])':
-  '!unbind': 'editor:join-lines'
-  'ctrl-e': 'emmet:expand-abbreviation'
+  'ctrl-j': 'emmet:expand-abbreviation'
   'tab': 'editor:auto-indent'
 
 'body':
+  'ctrl-c': 'unset!'
+  'ctrl-x': 'unset!'
+  'ctrl-v': 'unset!'
+  'alt-w': 'core:copy'
+  'ctrl-w': 'core:cut'
+  'ctrl-y': 'core:paste'
+  'ctrl-x ctrl-s': 'core:save'
   'alt-x': 'command-palette:toggle'
