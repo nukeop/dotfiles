@@ -2,6 +2,7 @@
   'ctrl-j': 'emmet:expand-abbreviation'
   'ctrl-x h': 'core:select-all'
   'tab': 'editor:auto-indent'
+  'tab tab': 'markdown-writer:jump-to-next-table-cell'
 
 'body':
   'ctrl-c': 'unset!'
