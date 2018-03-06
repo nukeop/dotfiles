@@ -1,0 +1,46 @@
+// Make the command palette look more like the Emacs minibuffer
+
+atom-panel-container.modal {
+  position: relative;
+  order: 0;
+}
+
+atom-panel-container.footer {
+  order: 1;
+}
+
+atom-panel.modal {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+
+  atom-text-editor[mini] {
+    margin-bottom: 0;
+  }
+
+  &:after,
+  &:before {
+    content: none;
+  }
+}
+
+atom-panel.modal.from-top {
+  top: auto;
+}
+
+.command-palette {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+
+  ol.list-group {
+    margin: 0.5rem;
+    margin-bottom: 0;
+    order: 0;
+  }
+
+  atom-text-editor[mini] {
+    margin: 0.5rem;
+    order: 1;
+  }
+}
