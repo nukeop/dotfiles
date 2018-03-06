@@ -2,11 +2,6 @@
 
 atom-panel-container.modal {
   position: relative;
-  order: 0;
-}
-
-atom-panel-container.footer {
-  order: 1;
 }
 
 atom-panel.modal {
@@ -14,18 +9,14 @@ atom-panel.modal {
   padding: 0;
   margin: 0;
 
-  atom-text-editor[mini] {
-    margin-bottom: 0;
+  &.from-top {
+    top: auto;
   }
 
   &:after,
   &:before {
     content: none;
   }
-}
-
-atom-panel.modal.from-top {
-  top: auto;
 }
 
 .command-palette {
@@ -42,5 +33,17 @@ atom-panel.modal.from-top {
   atom-text-editor[mini] {
     margin: 0.5rem;
     order: 1;
+
+    &.is-focused {
+      border: none;
+      box-shadow: none;
+    }
+
+    &:before {
+      content: "M-x ";
+      font-weight: bold;
+      white-space: nowrap;
+      padding-right: 1rem;
+    }
   }
 }
