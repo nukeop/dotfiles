@@ -11,6 +11,10 @@ atom-panel.modal {
   padding: 0;
   margin: 0;
 
+  atom-text-editor[mini] {
+    margin-bottom: 0.5rem;
+  }
+
   &.from-top {
     top: auto;
   }
@@ -37,6 +41,10 @@ atom-panel.modal {
     margin: 0.5rem;
     order: 1;
 
+    .lines {
+      padding-left: 0.5rem;
+    }
+
     &.is-focused {
       border: none;
       box-shadow: none;
@@ -46,8 +54,52 @@ atom-panel.modal {
       content: "M-x ";
       font-weight: bold;
       white-space: nowrap;
-      padding: 0.25rem 0.75rem;
+      padding: 0 0.75rem;
       background-color: @background-color-highlight;
+    }
+  }
+}
+
+.tab {
+  border-radius: 0.5rem 0.5rem 0 0;
+
+  &:hover {
+    background-color: @background-color-highlight;
+  }
+}
+
+.status-bar {
+  background-color: @app-background-color;
+  border-top: 2px solid @background-color-selected;
+  border-bottom: 2px solid @background-color-selected;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.status-bar-left,
+.status-bar-right {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  a {
+    color: @syntax-color-value;
+
+    &:hover {
+      color: @syntax-color-keyword;
+    }
+  }
+
+  path {
+    fill: @syntax-color-property !important;
+  }
+
+  .cursor-position a {
+    color: @syntax-color-property;
+
+    &:hover {
+      color: @syntax-text-color;
     }
   }
 }
