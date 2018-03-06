@@ -1,4 +1,6 @@
 // Make the command palette look more like the Emacs minibuffer
+@import 'syntax-variables';
+@import 'ui-variables';
 
 atom-panel-container.modal {
   position: relative;
@@ -31,6 +33,7 @@ atom-panel.modal {
   }
 
   atom-text-editor[mini] {
+    padding: 0;
     margin: 0.5rem;
     order: 1;
 
@@ -43,7 +46,8 @@ atom-panel.modal {
       content: "M-x ";
       font-weight: bold;
       white-space: nowrap;
-      padding-right: 1rem;
+      padding: 0.25rem 0.75rem;
+      background-color: @background-color-highlight;
     }
   }
 }
