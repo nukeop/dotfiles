@@ -1,6 +1,24 @@
-// Make the command palette look more like the Emacs minibuffer
 @import 'syntax-variables';
 @import 'ui-variables';
+
+// Minibuffer style
+
+atom-text-editor[mini] {
+  padding: 0;
+  margin: 0.5rem;
+  order: 1;
+
+  .lines {
+    padding-left: 0.5rem;
+  }
+
+  &.is-focused {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+// Make the command palette look more like the Emacs minibuffer
 
 atom-panel-container.modal {
   position: relative;
@@ -30,7 +48,8 @@ atom-panel.modal {
   flex-flow: column;
   width: 100%;
 
-  ol.list-group {
+  .list-group {
+    max-height: 312px;
     margin: 0 0.5rem;
     margin-bottom: 0;
     order: 0;
@@ -38,40 +57,17 @@ atom-panel.modal {
     border: none !important;
 
     li {
-      padding: 0 1em !important;
-      border-bottom: 1px solid fadeout(@text-color-highlight, 92%) !important;
-      background-color: @app-background-color;
-      font-family: Ubuntu Mono;
-      font-size: 16px;
-      color: @syntax-color-tag;
-
-      &.selected {
-        background-color: @base-background-color;
-        color: @syntax-color-property;
-        font-weight: bold;
-      }
+      font-size: 1.25em;
     }
 
     .key-binding {
-      background-color: inherit;
+      background-color: @app-background-color;
       color: @syntax-color-value;
+      font-weight: bold;
     }
   }
 
   atom-text-editor[mini] {
-    padding: 0;
-    margin: 0.5rem;
-    order: 1;
-
-    .lines {
-      padding-left: 0.5rem;
-    }
-
-    &.is-focused {
-      border: none;
-      box-shadow: none;
-    }
-
     &:before {
       content: "M-x ";
       font-weight: bold;
@@ -82,13 +78,15 @@ atom-panel.modal {
   }
 }
 
-.tab {
-  border-radius: 0.5rem 0.5rem 0 0;
+// Highlight tabs on hover
 
+.tab {
   &:hover {
     background-color: @background-color-highlight;
   }
 }
+
+// Make the status bar look more like the Emacs bar
 
 .status-bar {
   background-color: @app-background-color;
@@ -123,5 +121,19 @@ atom-panel.modal {
     &:hover {
       color: @syntax-text-color;
     }
+  }
+}
+
+.advanced-open-file {
+  .info-message {
+    display: none;
+  }
+
+  .list-group {
+    max-height: 312px;
+  }
+
+  .path-input-container {
+    order: 1;
   }
 }
