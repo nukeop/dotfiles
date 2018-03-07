@@ -19,5 +19,5 @@
   'ctrl-x k': 'core:close'
   'ctrl-x o': 'window:focus-next-pane'
   'ctrl-x ctrl-c': 'application:quit'
-  'ctrl-x ctrl-f': 'application:open-file'
+  'ctrl-x ctrl-f': 'advanced-open-file:toggle'
   'alt-x': 'command-palette:toggle'
