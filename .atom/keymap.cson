@@ -21,6 +21,10 @@
   'ctrl-x ctrl-c': 'application:quit'
   'ctrl-x ctrl-f': 'advanced-open-file:toggle'
   'alt-x': 'command-palette:toggle'
+  'ctrl-shift-up': 'window:focus-pane-above'
+  'ctrl-shift-down': 'window:focus-pane-below'
+  'ctrl-shift-left': 'window:focus-pane-on-left'
+  'ctrl-shift-right': 'window:focus-pane-on-right'
 
 '.advanced-open-file atom-text-editor':
   'left': 'editor:delete-to-beginning-of-word'
