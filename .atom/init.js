@@ -31,7 +31,7 @@ for(i in themes.install) {
   console.log(`Installing ${themes.install[i]}...`);
   new BufferedProcess({
     command: 'apm',
-    args: ['install', packages[i]],
+    args: ['install', themes.install[i]],
     stdout: msg => console.log(msg),
     exit: code => console.log(`Package installed with code ${code}`)
   });
@@ -50,4 +50,8 @@ atom.config.set('editor.softWrap', true);
 // Define custom commands
 atom.commands.add('atom-text-editor:not([mini])', 'user:sort-lines', event => {
   functions.sortLines();
+});
+
+atom.commands.add('atom-text-editor:not([mini])', 'user:reload-buffer', event => {
+  functions.reloadCurrentBuffer();
 });
