@@ -39,3 +39,15 @@ for(i in themes.install) {
 
 atom.config.set('core.themes', themes.activate);
 atom.themes.activateThemes();
+
+// Set config variables
+atom.config.set('editor.fontFamily', 'Ubuntu Mono');
+atom.config.set('editor.fontSize', 19);
+atom.config.set('editor.lineHeight', 1.3);
+atom.config.set('editor.showIndentGuide', true);
+atom.config.set('editor.softWrap', true);
+
+// Define custom commands
+atom.commands.add('atom-text-editor:not([mini])', 'user:sort-lines', event => {
+  functions.sortLines();
+});

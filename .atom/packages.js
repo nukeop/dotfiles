@@ -7,6 +7,6 @@ module.exports = [
   'file-icons',
   'highlight-selected',
   'language-babel',
-  'wakatime',
-  'pigments'
+  'pigments',
+  'wakatime'
 ]
