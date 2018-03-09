@@ -9,15 +9,17 @@ const themes = require('./themes');
 let installedPackages = atom.packages.getAvailablePackageNames();
 
 for(i in packages) {
-  if (_.includes(installedPackages, packages[i])) {
+  let package = packages[i];
+
+  if (_.includes(installedPackages, package)) {
     continue;
   }
-  atom.notifications.addInfo(`Installing package ${packages[i]}...`);
+  atom.notifications.addInfo(`Installing package ${package}...`);
   new BufferedProcess({
     command: 'apm',
-    args: ['install', packages[i]],
+    args: ['install', package],
     stdout: msg => console.log(msg),
-    exit: code => atom.notifications.addSuccess(`Package ${packages[i]} installed with code ${code}`)
+    exit: code => atom.notifications.addSuccess(`Package ${package} installed with code ${code}`)
   });
 }
 
