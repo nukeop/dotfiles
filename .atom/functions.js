@@ -10,11 +10,18 @@ function sortLines() {
   selection.insertText(lines);
 }
 
+function reloadCurrentBuffer() {
+  let editor = atom.workspace.getActiveTextEditor();
+  let buffer = editor.getBuffer();
+  buffer.reload();
+}
+
 function getGist() {
 
 }
 
 module.exports = {
   sortLines,
+  reloadCurrentBuffer,
   getGist
 }
