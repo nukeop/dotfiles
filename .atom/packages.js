@@ -9,6 +9,8 @@ module.exports = [
   'highlight-selected',
   'highlight-selected',
   'language-babel',
+  'markdown-preview-plus',
+  'markdown-writer',
   'pigments',
   'wakatime'
 ]

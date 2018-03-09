@@ -12,12 +12,12 @@ for(i in packages) {
   if (_.includes(installedPackages, packages[i])) {
     continue;
   }
-  console.log(`Installing ${packages[i]}...`);
+  atom.notifications.addInfo(`Installing package ${packages[i]}...`);
   new BufferedProcess({
     command: 'apm',
     args: ['install', packages[i]],
     stdout: msg => console.log(msg),
-    exit: code => console.log(`Package installed with code ${code}`)
+    exit: code => atom.notifications.addSuccess(`Package ${packages[i]} installed with code ${code}`)
   });
 }
 
@@ -28,12 +28,12 @@ for(i in themes.install) {
   if (_.includes(installedThemes, themes.install[i])) {
     continue;
   }
-  console.log(`Installing ${themes.install[i]}...`);
+  atom.notifications.addInfo(`Installing theme ${themes.install[i]}...`);
   new BufferedProcess({
     command: 'apm',
     args: ['install', themes.install[i]],
     stdout: msg => console.log(msg),
-    exit: code => console.log(`Package installed with code ${code}`)
+    exit: code => atom.notifications.addSuccess(`Theme ${themes.install[i]} installed with code ${code}`)
   });
 }
 
@@ -54,4 +54,8 @@ atom.commands.add('atom-text-editor:not([mini])', 'user:sort-lines', event => {
 
 atom.commands.add('atom-text-editor:not([mini])', 'user:reload-buffer', event => {
   functions.reloadCurrentBuffer();
+});
+
+atom.commands.add('body', 'user:load-from-github-gist', event => {
+  functions.getGist();
 });

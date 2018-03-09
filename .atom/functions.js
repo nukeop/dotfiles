@@ -10,6 +10,11 @@ function sortLines() {
   selection.insertText(lines);
 }
 
+function getGist() {
+
+}
+
 module.exports = {
-  sortLines
+  sortLines,
+  getGist
 }
