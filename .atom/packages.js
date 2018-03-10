@@ -5,7 +5,6 @@ module.exports = [
   'autocomplete-modules',
   'autocomplete-python',
   'emmet',
-  'etch',
   'file-icons',
   'highlight-selected',
   'highlight-selected',
