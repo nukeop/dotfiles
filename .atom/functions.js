@@ -31,20 +31,22 @@ function getGist() {
     let files = data.files;
 
     let pane = atom.workspace.getActivePane();
+
     for(i in files) {
       let fileEditor = atom.workspace.buildTextEditor();
+      let item = pane.addItem(fileEditor, {index: 0});
+      pane.activateItem(item);
       fileEditor.setText(files[i].content);
-      pane.addItem(fileEditor);
 
-      let title = atom.views.getView(pane).querySelector('.tab.active').querySelector('.title');
+      let title = atom.views.getView(pane).querySelector('.tab:first-child').querySelector('.title');
       title.innerText = files[i].filename;
+      console.log(title);
+      console.log(files[i].filename);
     }
   });
 
-}
-function top_kek(){
-const ebin = 'xD';
-console.log(ebin)
+
+
 }
 
 module.exports = {
