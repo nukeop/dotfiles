@@ -33,15 +33,13 @@ function getGist() {
     let pane = atom.workspace.getActivePane();
 
     for(i in files) {
-      let fileEditor = atom.workspace.buildTextEditor();
+      let fileEditor = atom.workspace.buildTextEditor({autoHeight: false});
       let item = pane.addItem(fileEditor, {index: 0});
       pane.activateItem(item);
       fileEditor.setText(files[i].content);
 
       let title = atom.views.getView(pane).querySelector('.tab:first-child').querySelector('.title');
       title.innerText = files[i].filename;
-      console.log(title);
-      console.log(files[i].filename);
     }
   });
 
