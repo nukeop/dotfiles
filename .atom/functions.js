@@ -42,9 +42,6 @@ function getGist() {
       title.innerText = files[i].filename;
     }
   });
-
-
-
 }
 
 module.exports = {

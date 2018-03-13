@@ -3,6 +3,7 @@ const BufferedProcess = window.require('atom').BufferedProcess;
 const functions = require('./functions');
 const packages = require('./packages');
 const themes = require('./themes');
+const jira = require('./jira');
 
 
 // Install required packages automatically
@@ -61,3 +62,5 @@ atom.commands.add('atom-text-editor:not([mini])', 'user:reload-buffer', event =>
 atom.commands.add('body', 'user:load-from-github-gist', event => {
   functions.getGist();
 });
+
+jira.addJira();
