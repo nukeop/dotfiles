@@ -63,4 +63,24 @@ atom.commands.add('body', 'user:load-from-github-gist', event => {
   functions.getGist();
 });
 
+// Add JIRA button to status bar
 jira.addJira();
+
+// Change tab titles to directory/file.ext
+atom.workspace.observeTextEditors(editor => {
+  if (editor.getTitle() !== 'untitled') {
+    let sp = editor.getPath().split('/');
+    let title = sp.slice(sp.length - 2).join('/');
+    editor.getTitle = () => title;
+    editor.getLongTitle = () => title;
+    editor.emitter.emit('did-change-title', editor.getTitle());
+  }
+});
+
+atom.workspace.onDidOpen(event => {
+  _.forEach(event.pane.items, item => {
+    if (item.emitter) {
+      item.emitter.emit('did-change-title', item.getTitle());
+    }
+  });
+});
