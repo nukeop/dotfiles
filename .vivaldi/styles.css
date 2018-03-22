@@ -11,3 +11,19 @@
 #panels-container.right {
   right: 0;
 }
+
+.button-toolbar.home,
+.button-toolbar.rewind,
+.button-toolbar.next {
+  display: none;
+}
+
+.tab-header {
+  font-variant: small-caps;
+  font-size: 18px;
+  padding: 0 0 0 6px;
+}
+
+.tab-header .title {
+  padding-bottom: 6ox;
+}
