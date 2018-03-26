@@ -55,3 +55,11 @@
   'String formatting':
     'prefix': 'sform'
     'body': '`${}`'
+
+  'Reducer return value':
+    'prefix': 'redreturn'
+    'body': """
+    return Object.assign({}, state, {
+      $1
+    });
+    """
