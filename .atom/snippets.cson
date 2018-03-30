@@ -15,6 +15,7 @@
         let {
 
         } = this.props;
+
         return (
 
         );
@@ -56,10 +57,18 @@
     'prefix': 'sform'
     'body': '`${}`'
 
-  'Reducer return value':
-    'prefix': 'redreturn'
+  'React.js functional component':
+    'prefix': 'funcomp'
     'body': """
-    return Object.assign({}, state, {
-      $1
-    });
+    import React from 'react';
+
+    import styles from './styles.scss';
+
+    const ${1:name} = props => {
+      return (
+
+      );
+    }
+
+    export default $1;
     """
