@@ -57,6 +57,10 @@
     'prefix': 'sform'
     'body': '`${}`'
 
+  'Local import':
+    'prefix': 'localimp'
+    'body': "import ${1:name} from './$1';"
+
   'React.js functional component':
     'prefix': 'funcomp'
     'body': """
