@@ -76,3 +76,69 @@
 
     export default $1;
     """
+
+'.source.gfm':
+  'API endpoint documentation entry':
+    'prefix': 'apiendp'
+    'body': """
+    ## ${1:url}
+    ${2:description}
+
+    ##### URL
+
+        $1
+
+    ##### Method
+
+        ${3:method}
+
+    ##### URL Params
+
+    Param | Required? | Type | Description
+    :-----|:----------|:-----|:-----------
+          |           |      |
+          |           |      |
+
+    ##### Body Params
+
+    Param | Required? | Type | Description
+    :-----|:----------|:-----|:-----------
+          |           |      |
+          |           |      |
+
+    ##### Success response
+
+    ###### HTTP Code
+
+        ${5:http_code_success}
+
+    ###### Content
+
+    Key | Type | Description
+    :---|:-----|:-----------
+        |      |
+
+    ##### Error response
+
+    ###### HTTP Code
+
+        ${6:http_code_error}
+
+    ###### Content
+
+    Key | Type | Description
+    :---|:-----|:-----------
+        |      |
+
+    ##### Sample call
+
+    ```javascript
+    ${7:sample_call}
+    ```
+
+    ##### Sample response
+
+    ```json
+    ${8:json_content}
+    ```
+    """
