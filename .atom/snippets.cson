@@ -76,6 +76,19 @@
 
     export default $1;
     """
+    
+  'Mongoose schema':
+    'prefix': 'schema'
+    'body': """
+    import mongoose from 'mongoose';
+
+    var ${1:name}Schema = mongoose.Schema({
+
+    });
+
+    var $1 = mongoose.model('$1', $1Schema);
+    export default $1;
+    """
 
 '.source.gfm':
   'API endpoint documentation entry':
