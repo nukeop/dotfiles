@@ -1,0 +1,45 @@
+set ssl_starttls=yes
+set ssl_force_tls=yes
+set imap_user = 'example@example.com'
+set imap_pass = 'password'
+set from='example@example.com'
+set realname='name and surname'
+set folder = imaps://imap.gmail.com/
+set spoolfile = imaps://imap.gmail.com/INBOX
+set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash="imaps://imap.gmail.com/[Gmail]/Trash"
+
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+set smtp_url=smtps://example@example.com@smtp.gmail.com
+set smtp_pass=password
+set move = no
+set imap_keepalive = 900
+set editor="emacsclient -a \"\" -t"
+set delete=ask-yes
+set include
+set hidden_host
+set timeout=30
+set date_format="%y-%m-%d %T"
+set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"
+set sidebar_visible
+set imap_check_subscribed
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+
+
+bind editor <space> noop
+macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive"
+macro index,pager d "<save-message>=[Gmail]/Bin<enter><enter>" "Bin"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+macro index gt "<change-folder>=[Gmail]/Bin<enter>" "Go to bin"
