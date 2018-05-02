@@ -1,0 +1,4 @@
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+image/gif; gm display -
+image/jpg; gm display -
+application/pdf; okular /dev/stdin
