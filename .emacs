@@ -32,6 +32,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (defvar alsw/mypackages '(
+			  ace-window
 			  ag
 			  all-the-icons
 			  all-the-icons-dired
@@ -85,6 +86,9 @@
 (require 'rebecca-theme)
 (load-theme 'rebecca)
 
+(require 'eyebrowse)
+(eyebrowse-mode t)
+
 (require 'rjsx-mode)
 (setq
  initial-scratch-message ""
@@ -114,6 +118,7 @@
 (global-linum-mode 1)
 (setq linum-format "%4d \u2502 ")
 (setq column-number-mode t)
+(global-set-key (kbd "C-x o") 'ace-window)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
