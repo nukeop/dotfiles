@@ -32,6 +32,8 @@
 
 (defvar alsw/mypackages '(
 			  ag
+			  all-the-icons
+			  all-the-icons-dired
 			  anaconda-mode
 			  auto-complete
 			  autothemer
