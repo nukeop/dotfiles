@@ -213,3 +213,5 @@
   (set-frame-font "Hack")
   (set-face-attribute 'default nil :family "Hack" :height 130)
   )
+
+(load-file "./.emacs.d/yas.el")
