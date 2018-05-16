@@ -235,3 +235,4 @@
   )
 
 (load-file "./.emacs.d/yas.el")
+(load-file "./.emacs.d/modeline.el")
