@@ -32,6 +32,8 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (defvar alsw/mypackages '(
+			  ac-helm
+			  ac-js2
 			  ace-window
 			  ag
 			  all-the-icons
@@ -106,6 +108,7 @@
  js-indent-level 2
  sgml-basic-offset 2
  sgml-attribute-offset 1
+ display-time-format "%T"
  )
 
 (delete-selection-mode t)
@@ -116,12 +119,15 @@
 (tooltip-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-linum-mode 1)
+(global-hl-line-mode 1)
+(display-time-mode 1)
 (setq linum-format "%4d \u2502 ")
 (setq column-number-mode t)
 (global-set-key (kbd "C-x o") 'ace-window)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "M-]") 'next-buffer)
 (global-set-key (kbd "M-[") 'previous-buffer)
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-:") 'ac-complete-with-helm)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
