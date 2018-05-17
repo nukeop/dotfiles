@@ -21,80 +21,15 @@
  '(mode-line ((t (:background "#333353" :box (:line-width 8 :color "#333353")))))
  '(mode-line-inactive ((t (:foreground "#666699" :box (:line-width 8 :color "#666699"))))))
 
+(load-file "./.emacs.d/packages.el")
 
-(require 'cl)
-(require 'package)
-(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
-                    (not (gnutls-available-p))))
-       (proto (if no-ssl "http" "https")))
-  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
-  (when (< emacs-major-version 24)
-    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
-(package-initialize)
-
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-
-(defvar alsw/mypackages '(
-			                    ac-helm
-			                    ac-js2
-			                    ace-window
-			                    ag
-			                    all-the-icons
-			                    all-the-icons-dired
-			                    anaconda-mode
-			                    auto-complete
-			                    autothemer
-			                    bind-key
-			                    emmet-mode
-			                    eyebrowse
-			                    flycheck
-			                    gotham-theme
-			                    helm
-			                    helm-projectile
-			                    js2-mode
-			                    json-mode
-			                    lua-mode
-			                    magit
-			                    markdown-mode
-			                    neotree
-			                    popup
-			                    popwin
-			                    projectile
-			                    rainbow-delimiters
-			                    rainbow-mode
-			                    rebecca-theme
-			                    react-snippets
-			                    restclient
-			                    rjsx-mode
-			                    wakatime-mode
-			                    web-mode
-			                    which-key
-			                    yasnippet
-			                    ))
-
-(defun alsw/packages-installed-p ()
-  (loop for pkg in alsw/mypackages
-        when (not (package-installed-p pkg)) do (return nil)
-        finally (return t)))
-
-(unless (alsw/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg alsw/mypackages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
-
-(require 'server)
 (unless (server-running-p)
   (server-start))
 
-(require 'rebecca-theme)
 (load-theme 'rebecca)
 
-(require 'eyebrowse)
 (eyebrowse-mode t)
 
-(require 'rjsx-mode)
 (setq
  initial-scratch-message ""
  inhibit-startup-message t
@@ -133,35 +68,27 @@
 (global-set-key (kbd "M-[") 'previous-buffer)
 (global-set-key (kbd "C-:") 'ac-complete-with-helm)
 
-(require 'auto-complete)
-(require 'auto-complete-config)
+
 (ac-config-default)
 (setq ac-disable-faces nil)
 
-(require 'all-the-icons)
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 
-(require 'neotree)
+
 
 (global-flycheck-mode)
 (global-wakatime-mode)
 
-(require 'helm)
-(require 'helm-config)
+
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (setq helm-autoresize-max-height 0)
 (setq helm-autoresize-min-height 20)
 (helm-autoresize-mode 1)
 (helm-mode 1)
-
-(require 'popwin)
 (popwin-mode 1)
-
 (which-key-mode 1)
 
-(require 'emmet-mode)
-(require 'web-mode)
 (setq web-mode-enable-css-colorization t)
 (setq web-mode-enable-block-face t)
 (setq web-mode-enable-part-face t)
@@ -171,10 +98,8 @@
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . web-mode))
 
-(require 'yasnippet)
 (yas-global-mode 1)
 
-(require 'projectile)
 (projectile-mode 1)
 (setq projectile-enable-caching t)
 
@@ -196,8 +121,6 @@
   (set-face-background 'web-mode-current-element-highlight-face "khaki1")
   )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
-
-(require 'react-snippets)
 
 (defun my-rjsx-mode-hook ()
   "Hook for RJSX mode (React)."
@@ -227,7 +150,6 @@
   )
 
 (when (window-system)
-  (set-default-font "Roboto Mono for Powerline")
   (set-frame-font "Roboto Mono for Powerline")
   (set-face-attribute 'default nil :family "Roboto Mono for Powerline" :height 120)
   )
