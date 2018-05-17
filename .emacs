@@ -227,11 +227,11 @@
   )
 
 (when (window-system)
-  (set-frame-font "Hack")
-  (set-face-attribute 'default nil :family "Fira Mono for Powerline" :height 120)
+  (set-default-font "Roboto Mono for Powerline")
+  (set-frame-font "Roboto Mono for Powerline")
+  (set-face-attribute 'default nil :family "Roboto Mono for Powerline" :height 120)
   )
 
 (load-file "./.emacs.d/yas.el")
 (load-file "./.emacs.d/modeline.el")
 (load-file "./.emacs.d/neotree.el")
-
