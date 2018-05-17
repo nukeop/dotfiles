@@ -11,10 +11,10 @@
 
 (defface mode-line-buffer-name
   '((t
-     :foreground "#f1eff8"
+     :foreground "##ecf0f1"
      :background "#333353"
      :box(:line-width 8 :color "#333353")
-     :family "Terminus"
+     :family "Roboto Mono for Powerline Regular"
      :height 130
      ))
   "Buffer name face"
@@ -26,7 +26,7 @@
      :foreground "#7aa5ff"
      :background "#333353"
      :box(:line-width 8 :color "#333353")
-     :family "Terminus"
+     :family "Roboto Mono for Powerline Regular"
      :height 130
      ))
   "Directory name in mode line"
@@ -35,7 +35,7 @@
 
 (defface mode-line-accent
   '((t
-     :foreground "#f1eff8"
+     :foreground "##ecf0f1"
      :background "#666699"
      :box(:line-width 8 :color "#ff79c6")
      ))
@@ -43,8 +43,29 @@
   :group 'basic-faces
   )
 
+(defface mode-line-eyebrowse
+  '((t
+     :foreground "##ecf0f1"
+     :background "#3498db"
+     :box(:line-width 8 :color "#3498db")
+     ))
+  "Eyebrowse workspace number"
+  :group 'basic-faces
+  )
+
+(declare-function eyebrowse--get 'eyebrowse)
+
 (setq-default mode-line-format
 	      '(
+
+		(:eval (when (and (bound-and-true-p eyebrowse-mode)
+				  (< 1 (length (eyebrowse--get 'window-configs))))
+			 (propertize  (format "  %s  " (int-to-string (eyebrowse--get 'current-slot)))
+				      'face 'mode-line-eyebrowse
+				      )
+			 )
+		       )
+		
 		(:eval
 		 (when (eql buffer-read-only t)
 		   (propertize
@@ -67,32 +88,10 @@
 				  )
 		      (propertize (format "%s " (substring (buffer-name) 0 (match-beginning 0))) 'face 'mode-line-buffer-name)
 		      )
-
-		   (propertize "%b " 'face 'mode-line-buffer-name)
+		   
+		   (propertize " %b " 'face 'mode-line-buffer-name)
 		   )
 		 )
-		
-		;; (:eval
-		;;  (if (buffer-file-name)
-		;;      (propertize
-		;;       (concat
-		;;        " "
-		;;        (all-the-icons-faicon "file-o" :v-adjust -0.05)
-		;;        " "
-		;;        (eval(when (string-match "<.*>$" buffer-name)
-		;; 	 (replace-regexp-in-string ">" "/" (nth 1 (split-string (buffer-name) "<")))
-		;; 	 ))
-		;;        (car (split-string (buffer-name) "<"))
-		;;        " "
-		;;        )
-		;;       'face 'mode-line-dir-name
-		;;       )
-		;;    (propertize " %b "
-		;; 	       'face 'mode-line-dir-name
-		;; 	       )
-		;;    )
-		;;  )
-
 		(:eval
 		 (if (buffer-modified-p)
 		     (propertize (format " %s " (all-the-icons-faicon "floppy-o" :v-adjust -0.05))
@@ -103,9 +102,10 @@
 		   )
 
 		(:propertize " %m ")
-		" "
 		(:propertize " %l:%c " face (:foreground "#f1eff8" :weight light))
 
+		(:propertize "    " face 'mode-line)
+		
 		(:eval (when (stringp vc-mode)
 			 (propertize (format "%s %s" (all-the-icons-octicon "git-branch" :v-adjust -0.05) (replace-regexp-in-string "^ Git-" "" (eval vc-mode))))
 			 )
