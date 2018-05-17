@@ -10,7 +10,7 @@
  '(package-selected-packages
    '(challenger-deep-theme all-the-icons rebecca-theme org highlight-parentheses rainbow-delimiters anaconda-mode solarized-theme react-snippets yasnippet ac-anaconda emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))
  '(popwin-mode t)
- '(wakatime-api-key "8cd859f5-19fe-426b-a98b-d76b016e5401")
+ '(wakatime-api-key "")
  '(wakatime-cli-path "/usr/local/bin/wakatime")
  '(wakatime-python-bin nil))
 (custom-set-faces
