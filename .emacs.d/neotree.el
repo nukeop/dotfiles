@@ -10,7 +10,7 @@
 (set-face-attribute 'neo-root-dir-face nil
 		    :background "#1a1b2b"
 		    :foreground "#55efc4"
-		    
+		    :height 120
 		    )
 
 (set-face-attribute 'neo-dir-link-face nil
@@ -41,8 +41,8 @@
 		    )
 
 (set-face-attribute 'neo-tree-buffer nil
-		    :font "Fira Mono for Powerline"
-		    :height 100
+		    :font "Roboto Mono for Powerline"
+		    :height 120
 		    :weight 'normal
 		    )
 
@@ -79,11 +79,12 @@
 		    (:eval
 		     (concat
 		      (propertize
-		       (format " %s" (all-the-icons-octicon "repo"))
+		       (format " %s " (all-the-icons-octicon "repo" :v-adjust -0.05) )
 		       )
-		      )
-		     (:propertize
-		      (projectile-project-root projectile-project-root)
+		      (propertize
+		       (neo-path--get-working-dir)
+		       'face '(:height 120)
+		       )
 		      )
 		     )
 		    )
@@ -94,4 +95,6 @@
 				:box '(:line-width 8 :color "#292a44")
 				)
 	    )
-	  )	
+	  )
+
+
