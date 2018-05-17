@@ -4,11 +4,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("72a097f48e588eaa08b17027ac20304dd3b3ea8ceaca4ca553fb2577b64f4d09" "b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "5b388add509c423e4ac275668662486628690e7ffe0050998615fc4c3669c16c" "0ca5a450034c92069769e071e63a3d2b2346c304bf186245467f59d993f5b979" "50b66fad333100cc645a27ada899a7b1d44f1ceb32140ab8e88fedabfb7d0daf" "473c69b2e448e37861e2051f793a8981ac419cc06ac66b2be6c08fddcf898175" "107693012b59b3a94faa869756333b8fe7224670f762ce97eb1dda89f03f5bcd" "7f6796a9b925f727bbe1781dc65f7f23c0aa4d4dc19613aa3cf96e41a96651e4" "e6370c4899d463555a6aecf2da2700e2e039f93273212ce1836e9f94ad4af278" "2e2ecba9a216bc734276a0642def5fccec44ee1facb4b6562a74e7fdcd5db997" "628cc301749fc392d32c26ba913402967a17d9f44c0a2b5e4c77850b50b5588b" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "4137af91ea70f2b3ba0f5dee69899f2c81be463c54d931179d2e5038c4947d36" "2affeafce8e8bf5803ccce901f779f95d0b0ac122145efee753baa4af4d73e26" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default))
+   '("dcb9fd142d390bb289fee1d1bb49cb67ab7422cd46baddf11f5c9b7ff756f64c" "72a097f48e588eaa08b17027ac20304dd3b3ea8ceaca4ca553fb2577b64f4d09" "b550fc3d6f0407185ace746913449f6ed5ddc4a9f0cf3be218af4fb3127c7877" "5b388add509c423e4ac275668662486628690e7ffe0050998615fc4c3669c16c" "0ca5a450034c92069769e071e63a3d2b2346c304bf186245467f59d993f5b979" "50b66fad333100cc645a27ada899a7b1d44f1ceb32140ab8e88fedabfb7d0daf" "473c69b2e448e37861e2051f793a8981ac419cc06ac66b2be6c08fddcf898175" "107693012b59b3a94faa869756333b8fe7224670f762ce97eb1dda89f03f5bcd" "7f6796a9b925f727bbe1781dc65f7f23c0aa4d4dc19613aa3cf96e41a96651e4" "e6370c4899d463555a6aecf2da2700e2e039f93273212ce1836e9f94ad4af278" "2e2ecba9a216bc734276a0642def5fccec44ee1facb4b6562a74e7fdcd5db997" "628cc301749fc392d32c26ba913402967a17d9f44c0a2b5e4c77850b50b5588b" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "b447129c5efd45c7dcfaaf99b94caf479637ff205b4e5b566efc7ce5496272ab" "df258df60e7e87aa3f3b0ba727f54d6c968036e23ac60673b8375525e5ea9c28" "2f9216992371bcc9bc26bca11698d9c778ef4609ad94f86e4810607bf0fde82e" "355e1c0eb7cd20794e983b4c6f5c0c978a85b159d6aadb2fae15faa25fb344e5" "4137af91ea70f2b3ba0f5dee69899f2c81be463c54d931179d2e5038c4947d36" "2affeafce8e8bf5803ccce901f779f95d0b0ac122145efee753baa4af4d73e26" "873d8b58357aecbeedd0acdda2aca3f3f5b92ceb4a5dbe9384a4837fe1e34aa3" default))
  '(kaolin-hl-line-colored t)
+ '(kaolin-themes-hl-line-colored t)
  '(package-selected-packages
-   '(all-the-icons rebecca-theme org highlight-parentheses rainbow-delimiters anaconda-mode solarized-theme react-snippets yasnippet ac-anaconda emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))
- '(wakatime-api-key "")
+   '(challenger-deep-theme all-the-icons rebecca-theme org highlight-parentheses rainbow-delimiters anaconda-mode solarized-theme react-snippets yasnippet ac-anaconda emmet-mode smartparens ag gotham-theme helm projectile neotree markdown-mode magit flycheck auto-complete))
+ '(popwin-mode t)
+ '(wakatime-api-key "8cd859f5-19fe-426b-a98b-d76b016e5401")
  '(wakatime-cli-path "/usr/local/bin/wakatime")
  '(wakatime-python-bin nil))
 (custom-set-faces
@@ -16,7 +18,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(mode-line ((t (:background "#333353" :box (:line-width 8 :color "#333353")))))
+ '(mode-line-inactive ((t (:foreground "#666699" :box (:line-width 8 :color "#666699"))))))
 
 
 (require 'cl)
@@ -32,42 +35,42 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (defvar alsw/mypackages '(
-			  ac-helm
-			  ac-js2
-			  ace-window
-			  ag
-			  all-the-icons
-			  all-the-icons-dired
-			  anaconda-mode
-			  auto-complete
-			  autothemer
-			  bind-key
-			  emmet-mode
-			  eyebrowse
-			  flycheck
-			  gotham-theme
-			  helm
-			  helm-projectile
-			  js2-mode
-			  json-mode
-			  lua-mode
-			  magit
-			  markdown-mode
-			  neotree
-			  popup
-			  popwin
-			  projectile
-			  rainbow-delimiters
-			  rainbow-mode
-			  rebecca-theme
-			  react-snippets
-			  restclient
-			  rjsx-mode
-			  wakatime-mode
-			  web-mode
-			  which-key
-			  yasnippet
-			  ))
+			                    ac-helm
+			                    ac-js2
+			                    ace-window
+			                    ag
+			                    all-the-icons
+			                    all-the-icons-dired
+			                    anaconda-mode
+			                    auto-complete
+			                    autothemer
+			                    bind-key
+			                    emmet-mode
+			                    eyebrowse
+			                    flycheck
+			                    gotham-theme
+			                    helm
+			                    helm-projectile
+			                    js2-mode
+			                    json-mode
+			                    lua-mode
+			                    magit
+			                    markdown-mode
+			                    neotree
+			                    popup
+			                    popwin
+			                    projectile
+			                    rainbow-delimiters
+			                    rainbow-mode
+			                    rebecca-theme
+			                    react-snippets
+			                    restclient
+			                    rjsx-mode
+			                    wakatime-mode
+			                    web-mode
+			                    which-key
+			                    yasnippet
+			                    ))
 
 (defun alsw/packages-installed-p ()
   (loop for pkg in alsw/mypackages
@@ -108,7 +111,8 @@
  js-indent-level 2
  sgml-basic-offset 2
  sgml-attribute-offset 1
- display-time-format "%T"
+ display-time-format "%H:%M"
+ display-time-default-load-average nil
  )
 
 (delete-selection-mode t)
@@ -138,14 +142,6 @@
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 
 (require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-(setq-default neo-smart-open t)
-(setq-default neo-dont-be-alone t)
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-(add-hook 'neo-change-root-hook
-          (lambda () (neo-buffer--with-resizable-window
-		      (let ((fit-window-to-buffer-horizontally t))
-			(fit-window-to-buffer)))))
 
 (global-flycheck-mode)
 (global-wakatime-mode)
@@ -227,12 +223,15 @@
   "Hook for python mode."
   (common-hook)
   (anaconda-mode 1)
+  (buffer-face-set 'neo-tree-buffer)
   )
 
 (when (window-system)
   (set-frame-font "Hack")
-  (set-face-attribute 'default nil :family "Hack" :height 130)
+  (set-face-attribute 'default nil :family "Fira Mono for Powerline" :height 120)
   )
 
 (load-file "./.emacs.d/yas.el")
 (load-file "./.emacs.d/modeline.el")
+(load-file "./.emacs.d/neotree.el")
+
