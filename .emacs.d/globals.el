@@ -10,9 +10,12 @@
 (setq
  ac-disable-faces nil
  auto-save-default nil
+ blink-cursor-mode 0
  coding-system-for-read 'utf-8
  coding-system-for-write 'utf-8
  column-number-mode t
+ cursor-in-non-selected-windows nil
+ custom-safe-themes t
  default-fill-column 80
  display-time-default-load-average nil
  display-time-format "%H:%M"
@@ -27,6 +30,8 @@
  linum-format "%4d \u2502 "
  make-backup-files nil
  projectile-enable-caching t
+ scroll-conservatively 10
+ scroll-margin 10
  sgml-attribute-offset 1
  sgml-basic-offset 2
  tab-width 2
@@ -35,6 +40,8 @@
  web-mode-enable-css-colorization t
  web-mode-enable-current-element-highlight t
  web-mode-enable-part-face t
+ window-combination-resize t
+ x-stretch-cursor t
  )
 
 (ac-config-default)

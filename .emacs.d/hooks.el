@@ -5,6 +5,7 @@
 	  )
 
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+(add-hook 'focus-out-hook #'garbage-collect)
 
 (add-hook 'web-mode-hook (lambda ()
 			   (setq web-mode-markup-indent-offset 2)
