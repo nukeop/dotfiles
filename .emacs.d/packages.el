@@ -11,42 +11,41 @@
   )
 
 (defvar mypackages '(
-			                    ac-helm
-			                    ac-js2
-			                    ace-window
-			                    ag
-			                    all-the-icons
-			                    all-the-icons-dired
-			                    anaconda-mode
-			                    auto-complete
-			                    autothemer
-			                    bind-key
-			                    emmet-mode
-			                    eyebrowse
-			                    flycheck
-			                    gotham-theme
-			                    helm
-			                    helm-projectile
-			                    js2-mode
-			                    json-mode
-			                    lua-mode
-			                    magit
-			                    markdown-mode
-			                    neotree
-			                    popup
-			                    popwin
-			                    projectile
-			                    rainbow-delimiters
-			                    rainbow-mode
-			                    rebecca-theme
-			                    react-snippets
-			                    restclient
-			                    rjsx-mode
-			                    wakatime-mode
-			                    web-mode
-			                    which-key
-			                    yasnippet
-			                    ))
+		     ac-helm
+		     ac-js2
+		     ace-window
+		     ag
+		     all-the-icons
+		     all-the-icons-dired
+		     anaconda-mode
+		     auto-complete
+		     autothemer
+		     bind-key
+		     emmet-mode
+		     eyebrowse
+		     flycheck
+		     gotham-theme
+		     helm
+		     helm-projectile
+		     js2-mode
+		     json-mode
+		     lua-mode
+		     magit
+		     markdown-mode
+		     neotree
+		     popup
+		     popwin
+		     projectile
+		     rainbow-delimiters
+		     rainbow-mode
+		     rebecca-theme
+		     restclient
+		     rjsx-mode
+		     wakatime-mode
+		     web-mode
+		     which-key
+		     yasnippet
+		     ))
 
 (defun packages-installed-p ()
   (loop for pkg in mypackages
@@ -60,19 +59,18 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
-(require 'server)
-(require 'rebecca-theme)
-(require 'eyebrowse)
-(require 'rjsx-mode)
+(require 'all-the-icons)
 (require 'auto-complete)
 (require 'auto-complete-config)
-(require 'all-the-icons)
-(require 'neotree)
+(require 'emmet-mode)
+(require 'eyebrowse)
 (require 'helm)
 (require 'helm-config)
+(require 'neotree)
 (require 'popwin)
-(require 'emmet-mode)
+(require 'projectile)
+(require 'rebecca-theme)
+(require 'rjsx-mode)
+(require 'server)
 (require 'web-mode)
 (require 'yasnippet)
-(require 'projectile)
-(require 'react-snippets)

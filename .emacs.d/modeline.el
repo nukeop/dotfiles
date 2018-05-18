@@ -11,7 +11,7 @@
 
 (defface mode-line-buffer-name
   '((t
-     :foreground "##ecf0f1"
+     :foreground "#ecf0f1"
      :background "#333353"
      :box(:line-width 8 :color "#333353")
      :family "Roboto Mono for Powerline Regular"
@@ -35,7 +35,7 @@
 
 (defface mode-line-accent
   '((t
-     :foreground "##ecf0f1"
+     :foreground "#ecf0f1"
      :background "#666699"
      :box(:line-width 8 :color "#ff79c6")
      ))
@@ -45,7 +45,7 @@
 
 (defface mode-line-eyebrowse
   '((t
-     :foreground "##ecf0f1"
+     :foreground "#ecf0f1"
      :background "#3498db"
      :box(:line-width 8 :color "#3498db")
      ))

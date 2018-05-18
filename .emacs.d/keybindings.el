@@ -1,0 +1,7 @@
+(global-set-key (kbd "C-:") 'ac-complete-with-helm)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x o") 'ace-window)
+(global-set-key (kbd "M-[") 'previous-buffer)
+(global-set-key (kbd "M-]") 'next-buffer)
+(global-set-key (kbd "M-x") 'helm-M-x)
