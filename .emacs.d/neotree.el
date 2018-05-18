@@ -90,9 +90,9 @@
 		    )
 		  )
 	    (set-face-attribute 'header-line nil
-				:background "#292a44"
-				:foreground "#55efc4"
-				:box '(:line-width 8 :color "#292a44")
+				:background "#27ae60"
+				:foreground "#2c3e50"
+				:box '(:line-width 8 :color "#27ae60")
 				)
 	    )
 	  )
