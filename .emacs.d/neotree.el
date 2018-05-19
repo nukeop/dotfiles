@@ -11,6 +11,7 @@
 		    :background "#1a1b2b"
 		    :foreground "#55efc4"
 		    :height 120
+		    :weight 'bold
 		    )
 
 (set-face-attribute 'neo-dir-link-face nil
@@ -67,7 +68,6 @@
 			  "^\\.git$"
 			  "^venv$"
 			  "^node_modules$"
-			  "^package-lock\\.json$"
 			  )
  )
 
@@ -90,9 +90,10 @@
 		    )
 		  )
 	    (set-face-attribute 'header-line nil
-				:background "#27ae60"
-				:foreground "#2c3e50"
-				:box '(:line-width 8 :color "#27ae60")
+				:background "#292a44"
+				:foreground "#55efc4"
+				:box '(:line-width 8 :color "#292a44")
+				:weight 'bold
 				)
 	    )
 	  )

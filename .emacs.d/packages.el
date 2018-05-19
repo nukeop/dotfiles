@@ -74,3 +74,4 @@
 (require 'server)
 (require 'web-mode)
 (require 'yasnippet)
+(autoload 'vc-git-root "vc-git")

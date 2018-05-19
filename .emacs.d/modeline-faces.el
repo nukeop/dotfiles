@@ -1,7 +1,7 @@
 (defface mode-base
   '((t
-     :background "#2c3e50"
-     :box (:line-width 8 :color "#2c3e50")
+     :background "#2d3436"
+     :box (:line-width 8 :color "#2d3436")
      ))
   "Basic mode line face"
   :group 'basic-faces
@@ -9,9 +9,19 @@
 
 (defface mode-green
   '((t
-     :foreground "#ecf0f1"
-     :background "#27ae60"
-     :box (:line-width 8 :color "#27ae60")
+     :foreground "#55efc4"
+     :background "#00b894"
+     :box (:line-width 8 :color "#00b894")
+     ))
+  "Green mode segment"
+  :group 'basic-faces
+  )
+
+(defface mode-black-green
+  '((t
+     :foreground "#55efc4"
+     :background "#2d3436"
+     :box (:line-width 8 :color "#2d3436")
      ))
   "Green mode segment"
   :group 'basic-faces
@@ -19,9 +29,9 @@
 
 (defface mode-red
   '((t
-     :foreground "#ecf0f1"
-     :background "#c0392b"
-     :box (:line-width 8 :color "#c0392b")
+     :foreground "#ff7675"
+     :background "#d63031"
+     :box (:line-width 8 :color "#d63031")
      ))
   "Red mode segment"
   :group 'basic-faces
@@ -29,9 +39,9 @@
 
 (defface mode-blue
   '((t
-     :foreground "#ecf0f1"
-     :background "#2980b9"
-     :box (:line-width 8 :color "#2980b9")
+     :foreground "#74b9ff"
+     :background "#0984e3"
+     :box (:line-width 8 :color "#0984e3")
      ))
   "Blue mode segment"
   :group 'basic-faces
@@ -39,9 +49,9 @@
 
 (defface mode-yellow
   '((t
-     :foreground "#f1c40f"
-     :background "#f39c12"
-     :box (:line-width 8 :color "#f39c12")
+     :foreground "#ffeaa7"
+     :background "#fdcb6e"
+     :box (:line-width 8 :color "#fdcb6e")
      ))
   "Yellow mode segment"
   :group 'basic-faces
@@ -49,9 +59,9 @@
 
 (defface mode-orange
   '((t
-     :foreground "#e67e22"
-     :background "#d35400"
-     :box (:line-width 8 :color "#d35400")
+     :foreground "#fab1a0"
+     :background "#e17055"
+     :box (:line-width 8 :color "#e17055")
      ))
   "Orange mode segment"
   :group 'basic-faces
@@ -59,9 +69,9 @@
 
 (defface mode-purple
   '((t
-     :foreground "#ecf0f1"
-     :background "#8e44ad"
-     :box (:line-width 8 :color "#8e44ad")
+     :foreground "#a29bfe"
+     :background "#6c5ce7"
+     :box (:line-width 8 :color "#6c5ce7")
      ))
   "Purple mode segment"
   :group 'basic-faces
@@ -69,9 +79,9 @@
 
 (defface mode-teal
   '((t
-     :foreground "#ecf0f1"
-     :background "#16a085"
-     :box (:line-width 8 :color "#16a085")
+     :foreground "#81ecec"
+     :background "#00cec9"
+     :box (:line-width 8 :color "#00cec9")
      ))
   "Teal mode segment"
   :group 'basic-faces
@@ -79,7 +89,7 @@
 
 (defface mode-black
   '((t
-     :foreground "#ecf0f1"
+     :foreground "#dfe6e9"
      :background "#2c3e50"
      :box (:line-width 8 :color "#2c3e50")
      ))
@@ -89,29 +99,29 @@
 
 (defface mode-white
   '((t
-     :foreground "#2c3e50"
-     :background "#ecf0f1"
-     :box (:line-width 8 :color "#ecf0f1")
+     :foreground "#2d3436"
+     :background "#dfe6e9"
+     :box (:line-width 8 :color "#dfe6e9")
      ))
   "White mode segment"
   :group 'basic-faces
   )
 
 (set-face-attribute 'mode-line nil
-		    :foreground "#ecf0f1"
-		    :background "#2c3e50"
-		    :box '(:line-width 8 :color "#2c3e50")
+		    :foreground "#dfe6e9"
+		    :background "#2d3436"
+		    :box '(:line-width 8 :color "#2d3436")
 		    )
 
 (set-face-attribute 'mode-line-inactive nil
-		    :foreground "#95a5a6"
-		    :background "#7f8c8d"
-		    :box '(:line-width 8 :color "#7f8c8d")
+		    :foreground "#636e72"
+		    :background "#2d3436"
+		    :box '(:line-width 8 :color "#2d3436")
 		    )
 
 (defface mode-line-buffer-name
   '((t
-     :inherit 'mode-black
+     :inherit 'mode-line
      ))
   "Buffer name face"
   :group 'basic-faces
@@ -119,8 +129,8 @@
 
 (defface mode-line-dir-name
   '((t
-     :inherit 'mode-black
-     :foreground "#2980b9"
+     :inherit 'mode-line
+     :foreground "#74b9ff"
      ))
   "Directory name in mode line"
   :group 'basic-faces

@@ -4,7 +4,7 @@
     (propertize
      (concat
       (propertize (format-time-string " %H:%M ") 'face `(:height 0.9))
-      (propertize (format "%s " icon) 'face `(:height 1.0 :family ,(all-the-icons-wicon-family)) 'display '(raise -0.0)))
+      )
      'mouse-face '(:box 1 :color "#2c3e50")
      'help-echo '(format "%s" (format-time-string "%d %B %Y"))
      )

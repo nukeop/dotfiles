@@ -7,7 +7,7 @@
 (defun simple-mode-line-render (left right)
   "Return a string of `window-width' length containing LEFT, and RIGHT
  aligned respectively."
-  (let* ((available-width (- (window-width) (length left) -4)))
+  (let* ((available-width (- (window-width) (length left) -6)))
     (format (format "%%s %%%ds " available-width) left right)))
 
 (setq-default mode-line-format
@@ -39,20 +39,21 @@
 			)
 		      )
 		    )
-
+		   
 		   ;; Buffer name
 		   (eval
-		    (if (string-match "\<.*\>" (buffer-name))
-			(concat
-			 (propertize (format " %s/" (substring (eval(match-string 0)) 2 ))
-				     'face 'mode-line-dir-name
-				     )
-			 (propertize (format "%s " (substring (buffer-name) 0 (match-beginning 0))) 'face 'mode-line-buffer-name)
-			 )
-		      
-		      (propertize (format " %s " (buffer-name)))
+		    (when uniquify-managed
+		      (propertize (format " %s/" (file-name-nondirectory
+						(directory-file-name default-directory)))
+				  'face 'mode-line-dir-name
+				  )
 		      )
 		    )
+
+		   (eval
+		    (propertize (format "%s" (buffer-name)))
+		    )
+
 
 		   ;; Line and column
 		   (propertize (format-mode-line " %l:%c "))
@@ -63,11 +64,11 @@
 
 		   ;; Git branch
 		   (eval (when (stringp vc-mode)
-			   (propertize (format " %s %s " (all-the-icons-octicon "git-branch" :v-adjust -0.05) (replace-regexp-in-string "^ Git[-:]" "" (eval vc-mode))) 'face '(:inherit mode-line))
+			   (propertize (format " %s %s " (all-the-icons-octicon "git-branch" :v-adjust -0.05) (replace-regexp-in-string "^ Git[-:]" "" (eval vc-mode))) 'face '(:inherit mode-black-green))
 			   )
 			 )
-		   (propertize (custom-modeline-flycheck-status) 'face '(:inherit mode-line :height 100))
-		   (propertize (custom-modeline-time) 'face 'mode-white)
+		   (propertize (custom-modeline-flycheck-status) 'face '(:inherit mode-line :height 130))
+		   (propertize (custom-modeline-time) 'face 'mode-line)
 		   )
 		  
 		  )

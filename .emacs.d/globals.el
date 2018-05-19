@@ -34,6 +34,11 @@
  sgml-attribute-offset 1
  sgml-basic-offset 2
  tab-width 2
+ uniquify-after-kill-buffer-p t
+ uniquify-buffer-name-style 'forward
+ uniquify-ignore-buffers-re "^\\*"
+ uniquify-separator " • "
+ uniquify-strip-common-suffix t
  version-control t
  web-mode-enable-block-face t
  web-mode-enable-css-colorization t

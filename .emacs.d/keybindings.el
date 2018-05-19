@@ -5,4 +5,7 @@
 (global-set-key (kbd "M-[") 'previous-buffer)
 (global-set-key (kbd "M-]") 'next-buffer)
 (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-q") 'delete-window)
+(global-set-key (kbd "M--") 'split-window-below)
+(global-set-key (kbd "M-|") 'split-window-right)
 (global-set-key [f9] 'eval-buffer)
