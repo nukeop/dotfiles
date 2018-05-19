@@ -38,27 +38,4 @@
 			   )
 	  )
 
-(require 'vc)
-(cl-defun eyebrowse-magic-switch()
-  (ignore-errors
-    (let ((buf (vc-git-root
-		(buffer-file-name
-		 (window-buffer
-		  (selected-window))))))
-      (message "buf: %s" buf)
-      (neo-buffer--change-root
-       buf)
-      (return-from eyebrowse-magic-switch)
-      
-      )
-    )
-
-  (ignore-errors
-    (message "dir: %s" default-directory)
-    (neo-buffer--change-root default-directory)
-    )
-  )
-  
-(add-hook 'eyebrowse-post-window-switch-hook (eyebrowse-magic-switch))
-
 (provide 'hooks)
