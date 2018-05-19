@@ -7,7 +7,7 @@
 (defun simple-mode-line-render (left right)
   "Return a string of `window-width' length containing LEFT, and RIGHT
  aligned respectively."
-  (let* ((available-width (- (window-width) (length left) -3)))
+  (let* ((available-width (- (window-width) (length left) -4)))
     (format (format "%%s %%%ds " available-width) left right)))
 
 (setq-default mode-line-format
@@ -63,10 +63,10 @@
 
 		   ;; Git branch
 		   (eval (when (stringp vc-mode)
-			   (propertize (format " %s %s " (all-the-icons-octicon "git-branch" :v-adjust -0.05) (replace-regexp-in-string "^ Git[-:]" "" (eval vc-mode))) 'face 'mode-white)
+			   (propertize (format " %s %s " (all-the-icons-octicon "git-branch" :v-adjust -0.05) (replace-regexp-in-string "^ Git[-:]" "" (eval vc-mode))) 'face '(:inherit mode-line))
 			   )
 			 )
-		   (propertize (custom-modeline-flycheck-status) 'face '(:inherit 'mode-purple :height 100))
+		   (propertize (custom-modeline-flycheck-status) 'face '(:inherit mode-line :height 100))
 		   (propertize (custom-modeline-time) 'face 'mode-white)
 		   )
 		  

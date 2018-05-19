@@ -1,6 +1,6 @@
 (when (window-system)
   (set-frame-font "Roboto Mono for Powerline")
-  (set-face-attribute 'default nil :family "Roboto Mono for Powerline" :height 120)
+  (set-face-attribute 'default nil :family "Roboto Mono for Powerline" :height 140)
   (load-theme 'rebecca)
   (toggle-frame-maximized)
   (toggle-frame-fullscreen)

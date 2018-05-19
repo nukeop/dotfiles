@@ -1,5 +1,12 @@
 (package-initialize)
 
+(setq gc-cons-threshold 50000000)
+
+(add-hook 'emacs-startup-hook 'my/set-gc-threshold)
+(defun my/set-gc-threshold ()
+  "Reset `gc-cons-threshold' to its default value."
+  (setq gc-cons-threshold 800000))
+
 (setq-default custom-file (expand-file-name ".custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))

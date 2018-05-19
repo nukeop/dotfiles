@@ -70,7 +70,7 @@
 (require 'popwin)
 (require 'projectile)
 (require 'rebecca-theme)
-(require 'rjsx-mode)
+(autoload 'rjsx-mode "rjsx-mode")
 (require 'server)
 (require 'web-mode)
 (require 'yasnippet)

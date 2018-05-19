@@ -10,7 +10,6 @@
 (setq
  ac-disable-faces nil
  auto-save-default nil
- blink-cursor-mode 0
  coding-system-for-read 'utf-8
  coding-system-for-write 'utf-8
  column-number-mode t
@@ -45,7 +44,7 @@
  )
 
 (ac-config-default)
-(blink-cursor-mode t)
+(blink-cursor-mode 0)
 (delete-selection-mode t)
 (display-time-mode 1)
 (eyebrowse-mode t)
