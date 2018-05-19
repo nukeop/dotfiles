@@ -20,5 +20,3 @@
 (load-file "./.emacs.d/theme.el")
 (load-file "./.emacs.d/modeline.el")
 (load-file "./.emacs.d/neotree.el")
-
-
