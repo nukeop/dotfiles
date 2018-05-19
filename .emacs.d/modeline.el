@@ -39,11 +39,13 @@
 			)
 		      )
 		    )
+
+		   " "
 		   
 		   ;; Buffer name
 		   (eval
 		    (when uniquify-managed
-		      (propertize (format " %s/" (file-name-nondirectory
+		      (propertize (format "%s/" (file-name-nondirectory
 						(directory-file-name default-directory)))
 				  'face 'mode-line-dir-name
 				  )
@@ -53,7 +55,6 @@
 		   (eval
 		    (propertize (format "%s" (buffer-name)))
 		    )
-
 
 		   ;; Line and column
 		   (propertize (format-mode-line " %l:%c "))

@@ -1,4 +1,6 @@
-(package-initialize)
+(when (< emacs-major-version 27)
+  (package-initialize)
+  )
 
 (setq gc-cons-threshold 50000000)
 
