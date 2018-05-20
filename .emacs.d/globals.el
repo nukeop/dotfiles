@@ -13,6 +13,7 @@
  coding-system-for-read 'utf-8
  coding-system-for-write 'utf-8
  column-number-mode t
+ create-lockfiles nil
  cursor-in-non-selected-windows nil
  custom-safe-themes t
  default-fill-column 80
