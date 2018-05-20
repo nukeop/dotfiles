@@ -69,7 +69,7 @@
 			   )
 			 )
 		   (propertize (custom-modeline-flycheck-status) 'face '(:inherit mode-line :height 130))
-		   (propertize (custom-modeline-time) 'face 'mode-line)
+		   (propertize (custom-modeline-time))
 		   )
 		  
 		  )
