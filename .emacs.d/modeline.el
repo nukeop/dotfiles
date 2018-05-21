@@ -72,7 +72,13 @@
 				(t '(:inherit mode-black :height 130))
 				)
 			       )
-		   (propertize (custom-modeline-time))
+		   (propertize (custom-modeline-time) 'face
+			       (cond
+				((eq modeline-selected-window
+				     (get-buffer-window)) '(:inherit mode-white :foreground "#2d3436"))
+				(t 'mode-black)
+				)
+			       )
 		   )
 		  
 		  )
