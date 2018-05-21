@@ -1,3 +1,15 @@
+(defvar modeline-selected-window nil)
+(defun record-selected-window (windows)
+  (when (not (minibuffer-window-active-p (frame-selected-window)))
+    (setq modeline-selected-window (selected-window))))
+(add-function :before pre-redisplay-function #'record-selected-window)
+
+(defun simple-mode-line-render (left right)
+  "Return a string of `window-width' length containing LEFT, and RIGHT
+ aligned respectively."
+  (let* ((available-width (- (window-width) (length left) -6)))
+    (format (format "%%s %%%ds " available-width) left right)))
+
 (defun custom-modeline-time ()
   (let* ((hour (string-to-number (format-time-string "%I")))
          (icon (all-the-icons-wicon (format "time-%s" hour) :height 1.3 :v-adjust 0.0)))

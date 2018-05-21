@@ -89,9 +89,9 @@
 
 (defface mode-black
   '((t
-     :foreground "#dfe6e9"
-     :background "#2c3e50"
-     :box (:line-width 8 :color "#2c3e50")
+     :foreground "#636e72"
+     :background "#2d3436"
+     :box (:line-width 8 :color "#2d3436")
      ))
   "Black mode segment"
   :group 'basic-faces
@@ -99,7 +99,7 @@
 
 (defface mode-white
   '((t
-     :foreground "#2d3436"
+     :foreground "#b2bec3"
      :background "#dfe6e9"
      :box (:line-width 8 :color "#dfe6e9")
      ))

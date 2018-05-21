@@ -9,4 +9,8 @@
 (global-set-key (kbd "M-q") 'delete-window)
 (global-set-key (kbd "M--") 'split-window-below)
 (global-set-key (kbd "M-|") 'split-window-right)
+(global-set-key (kbd "M-<left>") 'windmove-left)
+(global-set-key (kbd "M-<right>") 'windmove-right)
+(global-set-key (kbd "M-<up>") 'windmove-up)
+(global-set-key (kbd "M-<down>") 'windmove-down)
 (global-set-key [f9] 'eval-buffer)
