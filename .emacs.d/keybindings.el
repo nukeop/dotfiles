@@ -1,5 +1,7 @@
+;; Keyboard bindings
 (global-set-key (kbd "C-:") 'ac-complete-with-helm)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-x p p") 'helm-projectile)
@@ -14,3 +16,9 @@
 (global-set-key (kbd "M-<up>") 'windmove-up)
 (global-set-key (kbd "M-<down>") 'windmove-down)
 (global-set-key [f9] 'eval-buffer)
+
+;; Custom functions
+(global-set-key (kbd "C-S-d") 'duplicate-line)
+
+;;Mouse bindings
+(unbind-key (kbd "<mouse-2>"))

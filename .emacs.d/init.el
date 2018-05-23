@@ -4,7 +4,7 @@
 
 (setq gc-cons-threshold 50000000)
 
-(add-hook 'emacs-startup-hook 'my/set-gc-threshold)
+(add-hook 'after-init-hook 'my/set-gc-threshold)
 (defun my/set-gc-threshold ()
   "Reset `gc-cons-threshold' to its default value."
   (setq gc-cons-threshold 800000))
