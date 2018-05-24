@@ -59,8 +59,6 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
-(require 'auto-complete)
-(require 'auto-complete-config)
 (autoload 'emmet-mode "sgml-mode")
 (autoload 'emmet-mode "js2-mode")
 (autoload 'emmet-mode "rjsx-mode")
@@ -68,9 +66,7 @@
 (require 'helm-config)
 (require 'neotree)
 (require 'popwin)
-(require 'projectile)
 (require 'rebecca-theme)
 (autoload 'rjsx-mode "rjsx-mode")
 (require 'server)
-(require 'web-mode)
 (autoload 'vc-git-root "vc-git")

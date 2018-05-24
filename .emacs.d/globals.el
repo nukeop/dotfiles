@@ -16,7 +16,7 @@
  create-lockfiles nil
  cursor-in-non-selected-windows nil
  custom-safe-themes t
- default-fill-column 80
+ fill-column 80
  display-time-default-load-average nil
  display-time-format "%H:%M"
  helm-autoresize-max-height 0
@@ -61,6 +61,7 @@
 (global-wakatime-mode)
 (helm-autoresize-mode 1)
 (helm-mode 1)
+(mouse-wheel-mode 1)
 (menu-bar-mode -1)
 (popwin-mode 1)
 (projectile-mode 1)
