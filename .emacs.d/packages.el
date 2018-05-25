@@ -41,6 +41,7 @@
 		     rebecca-theme
 		     restclient
 		     rjsx-mode
+		     visual-regexp
 		     wakatime-mode
 		     web-mode
 		     which-key

@@ -1,5 +1,7 @@
 ;; Keyboard bindings
 (global-set-key (kbd "C-:") 'ac-complete-with-helm)
+(global-set-key (kbd "C-c r") 'vr/replace)
+(global-set-key (kbd "C-c q") 'vr/query-replace)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
