@@ -50,7 +50,7 @@
 		    )
 
 		   (eval
-		    (propertize (format "%s" (buffer-name)))
+		    (propertize (format "%s" (uniquify-buffer-base-name)))
 		    )
 
 		   ;; Line and column
