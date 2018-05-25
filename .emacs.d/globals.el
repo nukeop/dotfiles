@@ -36,6 +36,8 @@
  linum-format "%4d \u2502 "
  make-backup-files nil
  projectile-enable-caching t
+ save-place t
+ save-place-file (concat user-emacs-directory "places")
  scroll-conservatively 10
  scroll-margin 10
  sgml-attribute-offset 1
@@ -68,12 +70,12 @@
 (global-wakatime-mode)
 (helm-autoresize-mode 1)
 (helm-mode 1)
-(mouse-wheel-mode 1)
 (menu-bar-mode -1)
+(mouse-wheel-mode 1)
 (popwin-mode 1)
 (projectile-mode 1)
 (scroll-bar-mode -1)
+(which-key-mode 1)
 (tool-bar-mode -1)
 (tooltip-mode -1)
-(which-key-mode 1)
 (yas-global-mode 1)
