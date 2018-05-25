@@ -6,6 +6,7 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.lk12\\'". lua-mode))
+(add-to-list 'auto-mode-alist '("\\.rest\\'". restclient-mode))
 
 (setq
  ac-disable-faces nil
@@ -16,12 +17,17 @@
  create-lockfiles nil
  cursor-in-non-selected-windows nil
  custom-safe-themes t
- fill-column 80
  display-time-default-load-average nil
  display-time-format "%H:%M"
+ fill-column 80
+ frame-title-format '("%b @Emacs " emacs-version)
  helm-autoresize-max-height 0
  helm-autoresize-min-height 20
+ icon-title-format '("%b @Emacs " emacs-version)
  indent-tabs-mode nil
+ indicate-buffer-boundaries t
+ indicate-empty-lines t
+ indicate-unused-lines t
  inhibit-splash-screen t
  inhibit-startup-message t
  initial-scratch-message ""
@@ -41,6 +47,7 @@
  uniquify-separator " • "
  uniquify-strip-common-suffix t
  version-control t
+ visible-bell t
  web-mode-enable-block-face t
  web-mode-enable-css-colorization t
  web-mode-enable-current-element-highlight t
