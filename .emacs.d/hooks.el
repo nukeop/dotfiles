@@ -14,22 +14,28 @@
 			   (setq web-mode-css-indent-offset 2)
 			   (setq web-mode-code-indent-offset 2)
 			   (setq css-indent-offset 2)
-			   (rainbow-mode 1)
+			   (setq rainbow-mode 1)
 			   (set-face-background 'web-mode-current-element-highlight-face "khaki1")
 			   )
 	  )
 
 
-(add-hook 'rjsx-mode-hook (lambda ()
-			    (emmet-mode 1)
-			    (smartparens-mode 1)
-			    (auto-complete-mode 1)
-			    (add-to-list 'ac-sources 'ac-source-filename)
-			    )
-	  )
+(defun js-modes-hook ()
+  (setq emmet-mode 1)
+  (setq smartparens-mode 1)
+  (setq auto-complete-mode 1)
+  (add-to-list 'ac-sources 'ac-source-filename)
+
+  (setq indent-tabs-mode nil)
+  (setq tab-width 2)
+  (setq rainbow-mode 1)
+  )
+
+(add-hook 'rjsx-mode-hook 'js-modes-hook)
+(add-hook 'js2-mode-hook 'js-modes-hook)
 
 (add-hook 'python-mode-hook (lambda()
-			      (anaconda-mode 1)
+			      (setq anaconda-mode 1)
 			      )
 	  )
 

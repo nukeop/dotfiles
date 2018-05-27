@@ -41,6 +41,7 @@
 		     rebecca-theme
 		     restclient
 		     rjsx-mode
+		     rust-mode
 		     visual-regexp
 		     wakatime-mode
 		     web-mode
@@ -60,9 +61,7 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
-(autoload 'emmet-mode "sgml-mode")
-(autoload 'emmet-mode "js2-mode")
-(autoload 'emmet-mode "rjsx-mode")
+(require 'emmet-mode)
 (require 'helm)
 (require 'helm-config)
 (require 'neotree)
