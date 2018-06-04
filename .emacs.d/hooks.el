@@ -2,6 +2,8 @@
 			    (rainbow-delimiters-mode 1)
 			    (show-paren-mode 1)
 			    (auto-fill-mode)
+			    (setq indent-tabs-mode nil)
+			    (setq tab-width 2)
 			    )
 	  )
 
@@ -14,28 +16,25 @@
 			   (setq web-mode-css-indent-offset 2)
 			   (setq web-mode-code-indent-offset 2)
 			   (setq css-indent-offset 2)
-			   (setq rainbow-mode 1)
+			   (rainbow-mode t)
 			   (set-face-background 'web-mode-current-element-highlight-face "khaki1")
 			   )
 	  )
 
 
 (defun js-modes-hook ()
-  (setq emmet-mode 1)
-  (setq smartparens-mode 1)
-  (setq auto-complete-mode 1)
+  (emmet-mode t)
+  (smartparens-mode t)
+  (auto-complete-mode t)
+  (rainbow-mode t)
   (add-to-list 'ac-sources 'ac-source-filename)
-
-  (setq indent-tabs-mode nil)
-  (setq tab-width 2)
-  (setq rainbow-mode 1)
   )
 
 (add-hook 'rjsx-mode-hook 'js-modes-hook)
 (add-hook 'js2-mode-hook 'js-modes-hook)
 
 (add-hook 'python-mode-hook (lambda()
-			      (setq anaconda-mode 1)
+			      (anaconda-mode t)
 			      )
 	  )
 
