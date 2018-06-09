@@ -38,9 +38,7 @@
  projectile-enable-caching t
  save-place t
  save-place-file (concat user-emacs-directory "places")
- scroll-conservatively 10
- scroll-margin 10
- sgml-attribute-offset 1
+ sgml-attribute-offset 0
  sgml-basic-offset 2
  tab-width 2
  uniquify-after-kill-buffer-p t
