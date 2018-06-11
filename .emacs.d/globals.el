@@ -2,19 +2,21 @@
   (server-start))
 
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.lk12\\'". lua-mode))
 (add-to-list 'auto-mode-alist '("\\.rest\\'". restclient-mode))
 
 (setq
  ac-disable-faces nil
+ ac-auto-start 2
  auto-save-default nil
  coding-system-for-read 'utf-8
  coding-system-for-write 'utf-8
  column-number-mode t
  create-lockfiles nil
+ css-indent-offset 2
  cursor-in-non-selected-windows nil
  custom-safe-themes t
  display-time-default-load-average nil
