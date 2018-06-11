@@ -1,0 +1,32 @@
+# -*- mode: snippet -*-
+# name: React.class_with_props
+# key: rclassp
+# --
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+class ${1:class} extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    let {
+
+    } = this.props;
+    return (
+      
+    );
+  }
+}
+
+$1.propTypes = {
+
+};
+
+$1.defaultProps = {
+
+};
+
+export default $1;
