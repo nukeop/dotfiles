@@ -1,0 +1,13 @@
+name: office
+root: ~/
+
+windows:
+  - mail: mutt
+  - music:
+      layout: main-horizontal
+      panes:
+        - vis
+        - mpsyt
+        - mpsyt
+  - work:
+    root: ~/work
