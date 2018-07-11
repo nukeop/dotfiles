@@ -1,8 +1,11 @@
+# /home/helios/.config/tmuxinator/office.yml
+
 name: office
 root: ~/
 
 windows:
   - mail: mutt
+  - slack: slack-term
   - music:
       layout: main-horizontal
       panes:
