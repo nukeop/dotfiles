@@ -38,6 +38,7 @@
  linum-format "%4d \u2502 "
  make-backup-files nil
  projectile-enable-caching t
+ racer-rust-src-path "~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/"
  save-place t
  save-place-file (concat user-emacs-directory "places")
  sgml-attribute-offset 0

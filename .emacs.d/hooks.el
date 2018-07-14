@@ -16,10 +16,16 @@
 			   (setq web-mode-css-indent-offset 2)
 			   (setq web-mode-code-indent-offset 2)
 			   (setq css-indent-offset 2)
+         (setq ac-sources (append ac-sources '(ac-css-property)))
 			   (rainbow-mode t)
 			   (set-face-background 'web-mode-current-element-highlight-face "khaki1")
 			   )
-	  )
+	        )
+
+(add-hook 'rust-mode-hook (lambda ()
+                            (flycheck-rust-setup)
+                            (racer-mode)
+                            ))
 
 
 (defun js-modes-hook ()

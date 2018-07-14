@@ -13,6 +13,7 @@
 (defvar mypackages '(
 		     ac-helm
 		     ac-js2
+         ac-racer
 		     ace-window
 		     ag
 		     all-the-icons
@@ -24,6 +25,7 @@
 		     emmet-mode
 		     eyebrowse
 		     flycheck
+         flycheck-rust
 		     gotham-theme
 		     helm
 		     helm-projectile
@@ -36,6 +38,7 @@
 		     popup
 		     popwin
 		     projectile
+         racer
 		     rainbow-delimiters
 		     rainbow-mode
 		     rebecca-theme
@@ -70,3 +73,4 @@
 (autoload 'rjsx-mode "rjsx-mode")
 (require 'server)
 (autoload 'vc-git-root "vc-git")
+(require 'smartparens-config)
