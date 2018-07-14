@@ -3,6 +3,7 @@ root: ~/
 
 windows:
   - mail: mutt
+  - slack: slack-term
   - music:
       layout: main-horizontal
       panes:
