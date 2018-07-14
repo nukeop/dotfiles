@@ -23,6 +23,7 @@
 	        )
 
 (add-hook 'rust-mode-hook (lambda ()
+                            (ac-racer-setup)
                             (flycheck-rust-setup)
                             (racer-mode)
                             ))
