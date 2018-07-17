@@ -1,0 +1,19 @@
+! Rofi config file
+rofi.modi: combi,ssh,keys
+rofi.combi-mod: window,drun
+rofi.location: 0
+rofi.lines: 12
+rofi.font: Ubuntu Mono 16
+rofi.show-icons: true
+rofi.display-window: Window
+rofi.display-drun: Search
+rofi.window-format: {c} {t}
+rofi.sidebar-mode: true
+
+! Style
+rofi.padding: 40
+rofi.bw: 0
+rofi.separator-style: none
+rofi.line-margin: 0
+rofi.line-padding: 0
+rofi.theme: ~/.config/rofi/theme.rasi
