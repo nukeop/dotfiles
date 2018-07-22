@@ -26,6 +26,7 @@
                             (ac-racer-setup)
                             (flycheck-rust-setup)
                             (racer-mode)
+                            (auto-complete-mode)
                             ))
 
 

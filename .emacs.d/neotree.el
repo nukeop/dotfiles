@@ -1,7 +1,7 @@
 (defface neo-tree-buffer
   '((t
-     :background "#1a1b2b"
-     :foreground "#f1eff8"
+     :background "#22252c"
+     :foreground "#ccd4e3"
      ))
   "Neotree dark background"
   :group 'basic-faces
@@ -9,35 +9,35 @@
 
 (set-face-attribute 'neo-root-dir-face nil
 		    :background "#1a1b2b"
-		    :foreground "#55efc4"
+		    :foreground "#0088CC"
 		    :height 120
 		    :weight 'bold
 		    )
 
 (set-face-attribute 'neo-dir-link-face nil
-		    :foreground "#74b9ff"
+		    :foreground "#61afef"
 		    )
 
 (set-face-attribute 'neo-vc-ignored-face nil
-		    :foreground "#53495d"
+		    :foreground "#64446d"
 		    )
 
 (set-face-attribute 'neo-vc-added-face nil
-		    :background "#55efc4"
-		    :foreground "#1a1b2b"
+		    :background "#284437"
+		    :foreground "#1e8967"
 		    )
 
 (set-face-attribute 'neo-vc-unregistered-face nil
-		    :foreground "#55efc4"
+		    :foreground "#1e8967"
 		    )
 
 (set-face-attribute 'neo-vc-removed-face nil
-		    :background "#ff79c6"
-		    :foreground "#1a1b2b"
+		    :background "#583333"
+		    :foreground "#b33c49"
 		    )
 
 (set-face-attribute 'neo-vc-edited-face nil
-		    :background "#efe4a1"
+		    :background "#da8548"
 		    :foreground "#1a1b2b"
 		    )
 
@@ -65,10 +65,10 @@
  neo-smart-open t
  neo-dont-be-alone t
  neo-hidden-regexp-list '(
-			  "^\\.git$"
-			  "^venv$"
-			  "^node_modules$"
-			  )
+			                    "^\\.git$"
+			                    "^venv$"
+			                    "^node_modules$"
+			                    )
  )
 
 (add-hook 'neotree-mode-hook
@@ -90,9 +90,9 @@
 		    )
 		  )
 	    (set-face-attribute 'header-line nil
-				:background "#292a44"
-				:foreground "#55efc4"
-				:box '(:line-width 8 :color "#292a44")
+				:background "#24282f"
+				:foreground "#61afef"
+				:box '(:line-width 8 :color "#24282f")
 				:weight 'bold
 				)
 	    )

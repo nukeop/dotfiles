@@ -35,6 +35,7 @@
 		     magit
 		     markdown-mode
 		     neotree
+         org-brain
 		     popup
 		     popwin
 		     projectile

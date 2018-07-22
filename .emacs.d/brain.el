@@ -2,4 +2,4 @@
 (setq org-id-track-globally t)
 
 (setq org-brain-visualize-default-choices 'all)
-(setq org-brain-title-max-length 12)
+(setq org-brain-title-max-length 30)
