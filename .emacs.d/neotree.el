@@ -29,7 +29,8 @@
 		    )
 
 (set-face-attribute 'neo-vc-unregistered-face nil
-		    :foreground "#1e8967"
+        :background "#284437"
+        :foreground "#1e8967"
 		    )
 
 (set-face-attribute 'neo-vc-removed-face nil

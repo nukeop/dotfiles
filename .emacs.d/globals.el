@@ -25,6 +25,7 @@
  frame-title-format '("%b @Emacs " emacs-version)
  helm-autoresize-max-height 0
  helm-autoresize-min-height 20
+ helm-display-header-line nil
  icon-title-format '("%b @Emacs " emacs-version)
  indent-tabs-mode nil
  indicate-buffer-boundaries t
@@ -35,7 +36,7 @@
  initial-scratch-message ""
  js-indent-level 2
  js2-basic-offset 2
- linum-format "%4d \u2502 "
+ linum-format "%4d  "
  make-backup-files nil
  projectile-enable-caching t
  racer-rust-src-path "~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/"
