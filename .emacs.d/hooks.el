@@ -16,7 +16,7 @@
 			   (setq web-mode-css-indent-offset 2)
 			   (setq web-mode-code-indent-offset 2)
 			   (setq css-indent-offset 2)
-         (setq ac-sources (append ac-sources '(ac-css-property)))
+		           (setq ac-sources (append ac-sources '(ac-css-property)))
 			   (rainbow-mode t)
 			   (set-face-background 'web-mode-current-element-highlight-face "khaki1")
 			   )
@@ -42,13 +42,13 @@
 (add-hook 'js2-mode-hook 'js-modes-hook)
 
 (add-hook 'python-mode-hook (lambda()
-			      (anaconda-mode t)
-			      )
-	  )
+                              (anaconda-mode t)
+                              )
+          )
 
 (add-hook 'lua-mode-hook (lambda()
-			   (setq lua-indent-level 2)
-			   )
+                           (setq lua-indent-level 2)
+                           )
 	        )
 
 (add-hook 'org-mode-hook (lambda()
@@ -56,5 +56,16 @@
                            (org-indent-mode)
                            )
           )
+
+(add-hook 'helm-before-initialize-hook (lambda()
+                                         (linum-mode 0)
+                                         ))
+
+(add-hook 'eshell-mode-hook (lambda()
+                              (set-face-attribute 'eshell-prompt nil :background "#22252c")
+                              (setq buffer-face-mode-face '(:background "#22252c"))
+                              (buffer-face-mode)
+                              (linum-mode 0)
+                              ))
 
 (provide 'hooks)

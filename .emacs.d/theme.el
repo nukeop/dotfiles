@@ -19,8 +19,8 @@
                     :background "#64446d"
                     :foreground "#c678dd")
 
-(add-hook 'helm-minibuffer-set-up-hook (lambda()
-                                         (face-remap-add-relative 'default
-                                                                  '(:background "#282c34"))
-                                         )
-          )
+
+(set-face-attribute 'helm-buffer-file nil
+                    :background "#22252c")
+(set-face-attribute 'helm-non-file-buffer nil
+                    :background "#22252c")

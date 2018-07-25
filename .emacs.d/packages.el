@@ -31,6 +31,7 @@
 		     helm-projectile
 		     js2-mode
 		     json-mode
+         linum-off
 		     lua-mode
 		     magit
 		     markdown-mode
@@ -67,8 +68,10 @@
       (package-install pkg))))
 
 (require 'emmet-mode)
+(require 'eshell)
 (require 'helm)
 (require 'helm-config)
+(require 'linum-off)
 (require 'neotree)
 (require 'popwin)
 (require 'rebecca-theme)
