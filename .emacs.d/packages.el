@@ -36,6 +36,7 @@
 		     markdown-mode
 		     neotree
          org-brain
+         org-bullets
 		     popup
 		     popwin
 		     projectile

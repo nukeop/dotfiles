@@ -8,8 +8,9 @@
   )
 
 (set-face-attribute 'neo-root-dir-face nil
-		    :background "#1a1b2b"
-		    :foreground "#0088CC"
+		    :background "#282c34"
+		    :foreground "#61afef"
+        :box '(:line-width 8 :color "#282c34")
 		    :height 120
 		    :weight 'bold
 		    )
@@ -42,7 +43,7 @@
 		    )
 
 (set-face-attribute 'neo-tree-buffer nil
-		    :font "Roboto Mono for Powerline"
+		    :font "Input"
 		    :height 120
 		    :weight 'normal
 		    )
@@ -74,27 +75,6 @@
 (add-hook 'neotree-mode-hook
 	  (lambda()
 	    (buffer-face-set 'neo-tree-buffer)
-	    (setq header-line-format
-		  '(
-		    (:eval
-		     (concat
-		      (propertize
-		       (format " %s " (all-the-icons-octicon "repo" :v-adjust -0.05) )
-		       )
-		      (propertize
-		       (neo-path--get-working-dir)
-		       'face '(:height 120)
-		       )
-		      )
-		     )
-		    )
-		  )
-	    (set-face-attribute 'header-line nil
-				:background "#24282f"
-				:foreground "#61afef"
-				:box '(:line-width 8 :color "#24282f")
-				:weight 'bold
-				)
 	    )
 	  )
 

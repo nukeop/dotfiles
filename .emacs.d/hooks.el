@@ -49,6 +49,12 @@
 (add-hook 'lua-mode-hook (lambda()
 			   (setq lua-indent-level 2)
 			   )
-	  )
+	        )
+
+(add-hook 'org-mode-hook (lambda()
+                           (org-bullets-mode)
+                           (org-indent-mode)
+                           )
+          )
 
 (provide 'hooks)

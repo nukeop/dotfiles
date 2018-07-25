@@ -25,3 +25,4 @@
 (load-file "~/.emacs.d/modeline.el")
 (load-file "~/.emacs.d/neotree.el")
 (load-file "~/.emacs.d/brain.el")
+(load-file "~/.emacs.d/elfeed.el")

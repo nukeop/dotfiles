@@ -1,7 +1,10 @@
 (when (window-system)
-  (set-frame-font "Space Mono for Powerline")
-  (set-face-attribute 'default nil :family "Roboto Mono for Powerline" :height 140)
+  (set-frame-font "Input")
+  (set-face-attribute 'default nil :family "Input" :height 140)
   (load-theme 'zerodark)
   (toggle-frame-maximized)
   (toggle-frame-fullscreen)
   )
+
+(set-face-attribute 'helm-source-header nil
+                    :height 1.0)
