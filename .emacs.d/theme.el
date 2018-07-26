@@ -18,9 +18,10 @@
 (set-face-attribute 'minibuffer-prompt nil
                     :background "#64446d"
                     :foreground "#c678dd")
-
-
 (set-face-attribute 'helm-buffer-file nil
                     :background "#22252c")
 (set-face-attribute 'helm-non-file-buffer nil
                     :background "#22252c")
+(set-face-attribute 'fringe nil
+                    :background "#282c34"
+                    :foreground "#282c34")

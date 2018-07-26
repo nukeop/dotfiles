@@ -23,6 +23,7 @@
  display-time-format "%H:%M"
  fill-column 80
  frame-title-format '("%b @Emacs " emacs-version)
+ fringe-mode 'left-only
  helm-autoresize-max-height 0
  helm-autoresize-min-height 20
  helm-display-header-line nil

@@ -1,11 +1,13 @@
 (setq
- org-directory "~/Documents/org"
- org-default-notes-file "~/Documents/org/notes.org"
+ diary-file "~/MEGA/org/diary.org"
+ org-directory "~/MEGA/org"
+ org-default-notes-file "~/MEGA/org/notes.org"
  org-fontify-done-headline t
  org-fontify-whole-heading-line t
  org-fontify-whole-heading-line t
  org-src-fontify-natively t
  org-src-tab-acts-natively t
+ org-cycle-separator-lines 1
  org-indent-indentation-per-level 2
  org-tags-column 0
  org-todo-keywords '(

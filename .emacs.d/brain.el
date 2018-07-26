@@ -1,4 +1,4 @@
-(setq org-brain-path "~/Documents/org/brain")
+(setq org-brain-path "~/MEGA/org/brain")
 (setq org-id-track-globally t)
 
 (setq org-brain-visualize-default-choices 'all)
