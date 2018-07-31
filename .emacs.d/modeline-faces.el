@@ -83,8 +83,8 @@
 (defface mode-black
   '((t
      :foreground "#3e4451"
-     :background "#22252c"
-     :box (:line-width 8 :color "#22252c")
+     :background "#24282f"
+     :box (:line-width 8 :color "#24282f")
      :family "all-the-icons-alltheicon"
      ))
   "Black mode segment"

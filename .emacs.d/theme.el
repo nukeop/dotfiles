@@ -50,5 +50,16 @@
 (set-face-attribute 'which-key-command-description-face nil
                     :background "#22252c")
 
+(set-face-attribute 'eshell-ls-directory nil
+                    :background "#22252c"
+                    )
+(set-face-attribute 'eshell-ls-executable nil
+                    :background "#22252c"
+                    )
+(set-face-attribute 'eshell-ls-symlink nil
+                    :background "#22252c"
+                    )
+
+
 (with-current-buffer " *Echo Area 0*" (face-remap-add-relative 'default '(:background "#22252c")))
 (with-current-buffer " *Echo Area 1*" (face-remap-add-relative 'default '(:background "#22252c")))
