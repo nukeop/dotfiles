@@ -66,6 +66,12 @@
                               (setq buffer-face-mode-face '(:background "#22252c"))
                               (buffer-face-mode)
                               (linum-mode 0)
+                              (hl-line-mode 0)
+                              (set-fringe-style 0)
                               ))
+
+(add-hook 'helm-major-mode-hook (lambda()
+                                  (face-remap-add-relative 'default '(:background "#22252c"))
+                                  ))
 
 (provide 'hooks)

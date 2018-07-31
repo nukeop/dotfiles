@@ -12,6 +12,7 @@
      :foreground "#98be65"
      :background "#3f6d54"
      :box (:line-width 8 :color "#3f6d54")
+     :family "all-the-icons-alltheicon"
      ))
   "Green mode segment"
   :group 'basic-faces
@@ -32,6 +33,7 @@
      :foreground "#ff6c6b"
      :background "#744a5b"
      :box (:line-width 8 :color "#744a5b")
+     :family "all-the-icons-alltheicon"
      ))
   "Red mode segment"
   :group 'basic-faces
@@ -42,6 +44,7 @@
      :foreground "#61afef"
      :background "#4e5079"
      :box (:line-width 8 :color "#4e5079")
+     :family "all-the-icons-alltheicon"
      ))
   "Blue mode segment"
   :group 'basic-faces
@@ -82,6 +85,7 @@
      :foreground "#3e4451"
      :background "#22252c"
      :box (:line-width 8 :color "#22252c")
+     :family "all-the-icons-alltheicon"
      ))
   "Black mode segment"
   :group 'basic-faces
@@ -105,8 +109,8 @@
 
 (set-face-attribute 'mode-line-inactive nil
 		    :foreground "#abb2bf"
-		    :background "#22252c"
-		    :box '(:line-width 8 :color "#22252c")
+		    :background "#24282f"
+		    :box '(:line-width 8 :color "#24282f")
 		    )
 
 (defface mode-line-buffer-name

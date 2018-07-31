@@ -70,6 +70,7 @@
 (require 'emmet-mode)
 (require 'eshell)
 (require 'helm)
+(require 'helm-command)
 (require 'helm-config)
 (require 'linum-off)
 (require 'neotree)

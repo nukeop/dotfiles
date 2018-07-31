@@ -9,7 +9,7 @@
  org-src-tab-acts-natively t
  org-cycle-separator-lines 1
  org-indent-indentation-per-level 2
- org-tags-column 0
+ org-tags-column -80
  org-todo-keywords '(
                      (sequence "[ ](t)" "[-](p)" "[?](m)" "|" "[X](d)")
                      (sequence "TODO(T)" "IN PROGRESS(P)" "|" "IN REVIEW(R)" "DONE(D)" )

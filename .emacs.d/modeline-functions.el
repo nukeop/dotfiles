@@ -15,7 +15,7 @@
          (icon (all-the-icons-wicon (format "time-%s" hour) :height 1.3 :v-adjust 0.0)))
     (propertize
      (concat
-      (propertize (format-time-string " %H:%M ") 'face `(:height 0.9))
+      (propertize (format-time-string " %H:%M ") 'face `(:height 1.0))
       )
      'mouse-face '(:box 1 :color "#2c3e50")
      'help-echo '(format "%s" (format-time-string "%d %B %Y"))

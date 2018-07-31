@@ -10,8 +10,8 @@
 		 (simple-mode-line-render
 
 		  (concat
-		   ;; Left
-
+		   ;; Left        
+       
 		   ;; Eyebrowse mode - workspace number
 		   (eval (when (and (bound-and-true-p eyebrowse-mode)
 				     (< 1 (length (eyebrowse--get 'window-configs))))
@@ -52,7 +52,7 @@
 		   (eval
 		    (propertize (format "%s" (if(uniquify-buffer-base-name)
 						 (uniquify-buffer-base-name)
-					       (buffer-name) ))) 
+					       (buffer-name) )))
 		    )
 
 		   ;; Line and column
