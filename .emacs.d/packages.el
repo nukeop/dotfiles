@@ -69,6 +69,7 @@
 
 (require 'emmet-mode)
 (require 'eshell)
+(require 'em-ls)
 (require 'helm)
 (require 'helm-command)
 (require 'helm-config)
