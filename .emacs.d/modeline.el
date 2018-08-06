@@ -68,19 +68,15 @@
 			   (propertize (format " %s %s " (all-the-icons-octicon "git-branch" :v-adjust -0.05) (replace-regexp-in-string "^ Git[-:]" "" (eval vc-mode))) 'face '(:inherit mode-black-green))
 			   )
 			 )
-		   (propertize (custom-modeline-flycheck-status) 'face
-			       (cond
-				((eq modeline-selected-window (get-buffer-window)) '(:inherit mode-line :height 130))
-				(t '(:inherit mode-black :height 130))
-				)
-			       )
-		   (propertize (custom-modeline-time) 'face
-			       (cond
-				((eq modeline-selected-window
-				     (get-buffer-window)) '(:inherit mode-white :foreground "#2d3436"))
-				(t 'mode-black)
-				)
-			       )
+       (eval (when (eq modeline-selected-window (get-buffer-window))
+               (propertize
+                (custom-modeline-flycheck-status) 'face '(:inherit mode-line)
+                )))
+
+       (eval (when (eq modeline-selected-window (get-buffer-window))
+               (propertize
+                (custom-modeline-time) 'face '(:inherit mode-white :foreground "#2d3436")
+                )))
 		   )
 		  
 		  )
