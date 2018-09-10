@@ -12,27 +12,29 @@
     lightbg:                     #636e72;
     selected-active-foreground:  #2d3436;
     alternate-active-background: #00b894;
-    background:                  #2d3436;
-    bordercolor:                 #2d3436;
+    background:                  #2d343666;
+    bordercolor:                 #2d343600;
     alternate-normal-foreground: @foreground;
-    normal-background:           #2d3436;
+    normal-background:           #2d343600;
     lightfg:                     #dfe6e9;
     selected-normal-background:  #dfe6e9;
     border-color:                @foreground;
     spacing:                     2;
-    separatorcolor:              #2d3436;
+    separatorcolor:              #2d343600;
     urgent-background:           rgba ( 0, 0, 208, 0 % );
     selected-urgent-background:  rgba ( 255, 129, 127, 100 % );
     alternate-urgent-foreground: @urgent-foreground;
     background-color:            rgba ( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
-    active-background:           #2d3436;
+    active-background:           #2d343600;
     selected-active-background:  #dfe6e9;
 }
 #window {
     background-color: @background;
     border:           0;
-    padding:          2em;
+    padding: 2em;
+    width: 50%;
+    height: 50%;
 }
 #mainbox {
     border:  0;

@@ -3,7 +3,7 @@ rofi.modi: combi,ssh,keys
 rofi.combi-mod: window,drun
 rofi.location: 0
 rofi.lines: 12
-rofi.font: Ubuntu Mono 16
+rofi.font: Hack 18
 rofi.show-icons: true
 rofi.display-window: Window
 rofi.display-drun: Search
