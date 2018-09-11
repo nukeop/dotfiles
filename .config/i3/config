@@ -144,10 +144,14 @@ exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec_always --no-startup-id ~/.config/i3/monitors.sh &
 exec_always --no-startup-id ~/.config/i3/feh.sh &
 exec_always --no-startup-id xbindkeys &
+exec_always --no-startup-id megasync &
+exec_always --no-startup-id nm-applet &
+exec_always --no-startup-id compton -b
+exec_always --no-startup-id setxkbmap -option ctrl:swapcaps
+
 for_window [class="feh"] floating enable
 for_window [class="feh"] move absolute position center
-
-exec_always --no-startup-id compton -b
+for_window [class="Vlc"] floating enable
 
 #colors:                border  backgr.  text    indicator
 client.focused          #3498db #3498db  #3498db #3498db
@@ -159,5 +163,11 @@ client.urgent           #3498db #c0392b  #3498db #34495e
 default_border pixel 4
 
 bindsym Control+Shift+l exec betterlockscreen -l blur
+bindsym $mod+space exec --no-startup-id "rofi -show combi"
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5%
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5%
 
-bindsym $mod+space exec --no-startup-id "rofi -show run"
+for_window [instance="dropdown"] fullscreen disable, floating enable border normal 0
