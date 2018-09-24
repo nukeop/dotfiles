@@ -138,7 +138,20 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 24
+mode "resize_gaps" {
+     bindsym Right gaps inner all plus 2
+     bindsym Left gaps inner all minus 2
+     
+     bindsym Up gaps outer all plus 2
+     bindsym Down gaps outer all minus 2
+     
+     bindsym Escape mode "default"
+     bindsym $mod+g mode "default"
+}
+bindsym $mod+g mode "resize_gaps"
+
+gaps inner 32
+gaps outer 0
 
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec_always --no-startup-id ~/.config/i3/monitors.sh &
@@ -147,7 +160,7 @@ exec_always --no-startup-id xbindkeys &
 exec_always --no-startup-id megasync &
 exec_always --no-startup-id nm-applet &
 exec_always --no-startup-id compton -b
-exec_always --no-startup-id setxkbmap -option ctrl:swapcaps
+exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
 for_window [class="feh"] floating enable
 for_window [class="feh"] move absolute position center
@@ -160,10 +173,10 @@ client.unfocused        #34495e #34495e  #3498db #34495e
 client.urgent           #3498db #c0392b  #3498db #34495e
 
 # Set window border width
-default_border pixel 4
+default_border pixel 0
 
 bindsym Control+Shift+l exec betterlockscreen -l blur
-bindsym $mod+space exec --no-startup-id "rofi -show combi"
+bindsym $mod+space exec --no-startup-id "rofi -show"
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle
