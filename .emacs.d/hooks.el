@@ -61,16 +61,20 @@
                                          (linum-mode 0)
                                          ))
 
-(add-hook 'eshell-mode-hook (lambda()
-                              (set-face-attribute 'eshell-prompt nil :background "#22252c")
+(defun terminals-hook ()
+(set-face-attribute 'eshell-prompt nil :background "#22252c")
                               (setq buffer-face-mode-face
-                                    '(:background "#22252c"))
+                                    '(:background "#22252c"
+                                      :family "Terminus"))
                                (setq-local global-hl-line-mode
                                            nil)
                               (buffer-face-mode)
                               (linum-mode 0)
                               (set-fringe-style 0)
-                              ))
+                              )
+
+(add-hook 'eshell-mode-hook 'terminals-hook)
+(add-hook 'term-mode-hook 'terminals-hook)
 
 (add-hook 'helm-major-mode-hook (lambda()
                                   (face-remap-add-relative 'default '(:background "#22252c"))
