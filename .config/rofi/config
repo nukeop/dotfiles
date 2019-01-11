@@ -1,6 +1,6 @@
 ! Rofi config file
-rofi.modi: combi,ssh,keys
-rofi.combi-mod: window,drun
+rofi.modi: combi,run
+rofi.combi-modi: window,drun
 rofi.location: 0
 rofi.lines: 12
 rofi.font: Hack 18
@@ -8,7 +8,7 @@ rofi.show-icons: true
 rofi.display-window: Window
 rofi.display-drun: Search
 rofi.window-format: {c} {t}
-rofi.sidebar-mode: true
+rofi.sidebar-mode: false
 
 ! Style
 rofi.padding: 40

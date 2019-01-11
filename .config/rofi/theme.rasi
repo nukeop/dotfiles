@@ -12,7 +12,7 @@
     lightbg:                     #636e72;
     selected-active-foreground:  #2d3436;
     alternate-active-background: #00b894;
-    background:                  #2d343666;
+    background:                  #2d343699;
     bordercolor:                 #2d343600;
     alternate-normal-foreground: @foreground;
     normal-background:           #2d343600;
@@ -28,11 +28,12 @@
     alternate-active-foreground: @active-foreground;
     active-background:           #2d343600;
     selected-active-background:  #dfe6e9;
+    font:                        "Ubuntu Mono Regular 16";
 }
 #window {
     background-color: @background;
     border:           0;
-    padding: 2em;
+    padding: 1em;
     width: 50%;
     height: 50%;
 }
@@ -127,12 +128,17 @@
     spacing:    0;
     text-color: @normal-foreground;
 }
+#prompt {
+ background-color: @urgent-foreground;
+ padding: 6px 9px;
+ font: "Ubuntu Mono Bold 16";
+}
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 #textbox-prompt-colon {
     expand:     false;
-    str:        ":";
-    margin:     0px 0.3em 0em 0em ;
+    str:        " ";
+    margin:     0em 0em 0em 0em ;
     text-color: @normal-foreground;
 }
