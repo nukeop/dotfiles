@@ -3,15 +3,16 @@ rofi.modi: combi,run
 rofi.combi-modi: window,drun
 rofi.location: 0
 rofi.lines: 12
-rofi.font: Hack 18
+rofi.font: Ubuntu Mono 18
 rofi.show-icons: true
-rofi.display-window: Window
-rofi.display-drun: Search
+rofi.display-window: Switch to
+rofi.display-combi:
+rofi.display-drun: Start
 rofi.window-format: {c} {t}
 rofi.sidebar-mode: false
+rofi.icon-theme: Papirus
 
 ! Style
-rofi.padding: 40
 rofi.bw: 0
 rofi.separator-style: none
 rofi.line-margin: 0
