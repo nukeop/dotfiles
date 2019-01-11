@@ -18,8 +18,8 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #000000
-background-alt = #212121
+background = #99000000
+background-alt = #88424242
 ;foreground = ${xrdb:color7:#222}
 foreground = #ecf0f1
 foreground-alt = #666666
@@ -28,7 +28,7 @@ secondary = #ecf0f1
 alert = #bd2c40
 
 [bar/bar2]
-monitor = "eDP1"
+monitor = "eDP-1"
 width = 100%
 height = 24
 offset-y = 32
@@ -40,7 +40,7 @@ modules-center = xwindow
 font-0 = Hack Nerd Font:style=Regular:pixelsize=16
 
 [bar/example]
-monitor = "eDP1"
+monitor = "eDP-1"
 width = 100%
 height = 32
 ;offset-x = 1%
@@ -63,7 +63,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Hack Nerd Font:style=Regular:pixelsize=14
+font-0 = Overpass Nerd Font:style=Regular:pixelsize=14
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
@@ -92,7 +92,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title%
+label = %title:0:50:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard

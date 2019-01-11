@@ -1,5 +1,6 @@
 module.exports = [
   'advanced-open-file',
+  'atom-beautify',
   'atom-css-comb',
   'atom-ternjs',
   'autocomplete-modules',
@@ -7,11 +8,11 @@ module.exports = [
   'emmet',
   'file-icons',
   'highlight-selected',
-  'highlight-selected',
   'language-babel',
+  'linter',
+  'linter-eslint',
   'markdown-preview-plus',
   'markdown-writer',
   'pigments',
-  'teletype',
   'wakatime'
 ]
