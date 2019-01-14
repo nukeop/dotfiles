@@ -1,0 +1,46 @@
+[global]
+browser = /usr/bin/firefox-trunk -new-tab
+dmenu = rofi -dmenu -p dunst
+monitor = 0
+follow = none
+geometry = "320x5-15+15"
+indicate_hidden = yes
+padding = 16
+horizontal_padding = 16
+frame_width = 16
+separator_color = frame
+sort = yes
+font = Ubuntu Mono 24px
+markup = full
+format = "<span foreground='#f3f4f5'><b>%s %p</b></span>\n%b"
+alignment = left
+show_age_threshold = 60
+word_wrap = yes
+ellipsize = middle
+show_indicators = yes
+icon_position = left
+max_icon_size = 32
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+history = ctrl+grave
+context = ctrl+shift+period
+
+[urgency_low]
+background = "#95a5a6"
+foreground = "#ecf0f1"
+frame_color = "#7f8c8d"
+timeout = 10
+
+[urgency_normal]
+background = "#3498db"
+frame_color = "#2980b9"
+foreground = "#ecf0f1"
+timeout = 10
+
+[urgency_critical]
+background = "#e74c3c"
+foreground = "#ecf0f1"
+frame_color = "#c0392b"
+timeout = 0
