@@ -114,7 +114,7 @@
 #inputbar {
     spacing:    0;
     text-color: @normal-foreground;
-    padding:    1px ;
+    padding:    0 0 1px 0;
 }
 #case-indicator {
     spacing:    0;
@@ -123,6 +123,7 @@
 #entry {
     spacing:    0;
     text-color: @normal-foreground;
+    padding: 0.3em 0 0 0;
 }
 #prompt, button{
     spacing:    0;
@@ -130,7 +131,7 @@
 }
 #prompt {
  background-color: @urgent-foreground;
- padding: 6px 9px;
+ padding: 0.3em 0.5em;
  font: "Ubuntu Mono Bold 16";
 }
 #inputbar {
