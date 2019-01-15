@@ -161,6 +161,7 @@ exec_always --no-startup-id xbindkeys &
 exec_always --no-startup-id megasync &
 exec_always --no-startup-id nm-applet &
 exec_always --no-startup-id compton -b
+exec_always --no-startup-id dunst &
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
 for_window [class="feh"] floating enable
@@ -179,12 +180,13 @@ default_border pixel 0
 bindsym Control+Shift+l exec betterlockscreen -l blur
 bindsym --release $mod+space exec --no-startup-id "rofi -show"
 bindsym --release $mod+p exec --no-startup-id "~/.config/rofi/rofi-power"
+bindsym --release $mod+o exec --no-startup-id "~/.config/rofi/rofi-ykman"
 
 bindsym --release Print exec --no-startup-id "cd Pictures && scrot -s"
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
-bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5%
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer sset Master 5%+ && notify-send -t 500 Volume $(amixer sget Master | grep "%" | cut -c22-24)"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer sset Master 5%- && notify-send -t 500 Volume $(amixer sget Master | grep "%" | cut -c22-24)"
+bindsym XF86AudioMute exec --no-startup-id "amixer sset Master toggle && notify-send -t 500 'Audio muted'"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 5% && notify-send -t 500 Brightness $(xbacklight -get)" 
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 5% && notify-send -t 500 Brightness $(xbacklight -get)"
 
 for_window [instance="dropdown"] fullscreen disable, floating enable border normal 0

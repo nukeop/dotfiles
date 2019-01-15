@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# rofi-ykman
+# Yubikey oath utility
+
+#2019 nukeop
+
+if [ ! $(ykman info) ]
+then
+    notify-send "rofi-ykman" "Yubikey not detected."
+    exit 1
+fi
+
+OPTIONS=$(ykman oath list)
+LAUNCHER="rofi -dmenu -i -p YubikeyOATH"
+
+option=`echo "${OPTIONS/, TOTP/\n}" | $LAUNCHER`
+code=$(ykman oath code "$option")
+IFS=', ' read -r -a code <<< "$code"
+echo "${code[1]}" | xclip -selection clipboard

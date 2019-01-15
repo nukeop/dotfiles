@@ -10,7 +10,7 @@ horizontal_padding = 16
 frame_width = 16
 separator_color = frame
 sort = yes
-font = Ubuntu Mono 24px
+font = Ubuntu Mono 16px
 markup = full
 format = "<span foreground='#f3f4f5'><b>%s %p</b></span>\n%b"
 alignment = left
@@ -31,13 +31,13 @@ context = ctrl+shift+period
 background = "#95a5a6"
 foreground = "#ecf0f1"
 frame_color = "#7f8c8d"
-timeout = 10
+timeout = 5
 
 [urgency_normal]
 background = "#3498db"
 frame_color = "#2980b9"
 foreground = "#ecf0f1"
-timeout = 10
+timeout = 5
 
 [urgency_critical]
 background = "#e74c3c"
