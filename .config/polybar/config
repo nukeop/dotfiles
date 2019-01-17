@@ -339,7 +339,7 @@ exec = ~/.config/polybar/mail
 interval = 15
 format = "[ ✉ <label> ]  "
 format-prefix= "  "
-format-background = #F00
+format-background = #c0392b
 format-foreground = #FFF
 
 [module/bat]
