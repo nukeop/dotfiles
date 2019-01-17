@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+
+import imaplib
+import re
+
+from credentials import GMAIL_CREDS
+
+
+def main():
+    obj = imaplib.IMAP4_SSL('imap.gmail.com', '993')
+    obj.login(GMAIL_CREDS[0], GMAIL_CREDS[1])
+    obj.select()
+    mails = obj.status("INBOX", "(UNSEEN)")
+    mails = re.search("UNSEEN (\d+)", mails[1][0].decode('utf-8')).group(1)
+    print(mails)
+    
+
+if __name__=='__main__':
+    main()

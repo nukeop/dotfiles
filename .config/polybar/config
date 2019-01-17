@@ -69,7 +69,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = xwindow
-modules-right = xbacklight pulseaudio bat wlan date
+modules-right = xbacklight pulseaudio mail bat wlan date
 
 tray-position = right
 tray-padding = 2
@@ -332,6 +332,12 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/mail]
+type = custom/script
+exec = ~/.config/polybar/mail
+interval = 60
+format = [ ✉ <label> ]
 
 [module/bat]
 type = custom/script
