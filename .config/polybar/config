@@ -336,8 +336,11 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/mail]
 type = custom/script
 exec = ~/.config/polybar/mail
-interval = 60
-format = [ ✉ <label> ]
+interval = 15
+format = "[ ✉ <label> ]  "
+format-prefix= "  "
+format-background = #F00
+format-foreground = #FFF
 
 [module/bat]
 type = custom/script
