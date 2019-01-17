@@ -69,7 +69,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = xwindow
-modules-right = xbacklight pulseaudio battery wlan powermenu date
+modules-right = xbacklight pulseaudio bat wlan date
 
 tray-position = right
 tray-padding = 2
@@ -333,6 +333,12 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
+[module/bat]
+type = custom/script
+exec = ~/.config/polybar/battery.sh
+interval = 10
+format-prefix = " "
+
 [module/battery]
 type = internal/battery
 battery = BAT0
@@ -347,7 +353,7 @@ format-discharging-prefix-foreground = #f1c40f
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = #2ecc71
 format-full-underline = ${self.format-charging-underline}
 
