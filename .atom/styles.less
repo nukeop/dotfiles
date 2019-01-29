@@ -28,6 +28,8 @@ atom-panel.modal {
   max-width: 100%;
   padding: 0;
   margin: 0;
+  width: 100%;
+  left: 0;
 
   atom-text-editor[mini] {
     margin-bottom: 0.5rem;
@@ -90,9 +92,9 @@ atom-panel.modal {
 
 .status-bar {
   background-color: @app-background-color;
-  border-top: 2px solid @background-color-selected;
-  border-bottom: 2px solid @background-color-selected;
-  margin-bottom: 1rem;
+  border-top: 0px solid @background-color-selected;
+  border-bottom: 0px solid @background-color-selected;
+  margin-bottom: 0rem;
   font-weight: bold;
   font-size: 14px;
 }
@@ -146,4 +148,8 @@ atom-text-editor {
     width: 50px !important;
     height: 50px !important;
   }
+}
+
+atom-dock.left .tab-bar {
+  display: none;
 }
