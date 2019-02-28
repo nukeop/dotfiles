@@ -46,6 +46,34 @@
       (rename-buffer new-name))))
 
 ;;----------------------------------------------------------------------------
+;; Run ESLint on current file
+;;----------------------------------------------------------------------------
+(defun eslint-this-file ()
+  "Run ESLint on current file-visiting buffer and reloads it."
+  (interactive)
+  (let ((filename (buffer-file-name))
+        )
+    (unless filename
+      (error "This is not a file"))
+    (progn
+      (when (file-exists-p filename)
+        (let ((process (start-process-shell-command filename (buffer-name) (format "npx eslint %s --fix" filename))))
+          (set-process-sentinel process 'eslint-sentinel)
+          )
+        )
+      )
+    )
+  )
+
+(defun eslint-sentinel (p e)
+  (let ((filename (buffer-file-name))
+        (line (line-number-at-pos)))
+    (find-alternate-file filename)
+    (move-to-window-line (- line 1))
+    )
+  )
+
+;;----------------------------------------------------------------------------
 ;; Duplicate line
 ;;----------------------------------------------------------------------------
 (defun duplicate-line ()
