@@ -21,6 +21,7 @@
  custom-safe-themes t
  display-time-default-load-average nil
  display-time-format "%H:%M"
+ emmet-expand-jsx-className? t
  fill-column 80
  frame-title-format '("%b @Emacs " emacs-version)
  fringe-mode 'left-only
