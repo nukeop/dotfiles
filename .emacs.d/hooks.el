@@ -84,4 +84,10 @@
                                   (face-remap-add-relative 'default '(:background "#22252c"))
                                   ))
 
+(add-hook 'after-save-hook (lambda()
+                             (when (eq major-mode 'rjsx-mode)
+                               (eslint-this-file)
+                               )
+                             ))
+
 (provide 'hooks)

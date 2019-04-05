@@ -9,6 +9,7 @@
 (global-set-key (kbd "C-x p p") 'helm-projectile)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-v") 'yank)
+(global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "M-[") 'previous-buffer)
 (global-set-key (kbd "M-]") 'next-buffer)
 (global-set-key (kbd "M-x") 'helm-M-x)

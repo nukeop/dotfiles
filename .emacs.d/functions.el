@@ -6,6 +6,11 @@
   (find-file "~/.emacs.d/init.el")
   )
 
+(defun open-dotfile-for-keybindings ()
+  (interactive)
+  (find-file "~/.emacs.d/keybindings.el")
+  )
+
 (defun open-dotfile-for-modeline ()
   (interactive)
   (find-file "~/.emacs.d/modeline.el")
@@ -68,8 +73,8 @@
 (defun eslint-sentinel (p e)
   (let ((filename (buffer-file-name))
         (line (line-number-at-pos)))
-    (find-alternate-file filename)
-    (move-to-window-line (- line 1))
+    (revert-buffer :ignore-auto :noconfirm)
+    (goto-line line)
     )
   )
 
@@ -77,15 +82,17 @@
 ;; Duplicate line
 ;;----------------------------------------------------------------------------
 (defun duplicate-line ()
-  "Duplicates the line the cursor is currently in"
+  "Duplicates the line the cursor is currently in."
   (interactive)
-  (let ((text (buffer-substring (line-beginning-position) (line-end-position)))
-	(column (current-column)))
-
+  (let (
+        (text (buffer-substring (line-beginning-position) (line-end-position)))
+        (column (current-column))
+        )
+    
     (end-of-line)
     (newline)
     (insert text)
-    (open-line)
+    (open-line 0)
     (move-to-column column)
     )
   )
