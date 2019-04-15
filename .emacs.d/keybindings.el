@@ -1,4 +1,11 @@
 ;; Keyboard bindings
+(define-key projectile-mode-map [remap projectile-find-file-dwim]
+  #'helm-projectile-find-file-dwim)
+(define-key projectile-mode-map [remap projectile-find-file]
+  #'helm-projectile-find-file-dwim)
+(define-key projectile-mode-map [remap projectile-switch-project]
+  #'helm-projectile)
+
 (global-set-key (kbd "C-:") 'ac-complete-with-helm)
 (global-set-key (kbd "C-c r") 'vr/replace)
 (global-set-key (kbd "C-c q") 'vr/query-replace)
@@ -32,7 +39,6 @@
 (global-set-key (kbd "s-0") 'eyebrowse-switch-to-window-config-0)
 (global-set-key (kbd "s-a") 'eyebrowse-prev-window-config)
 (global-set-key (kbd "s-d") 'eyebrowse-next-window-config)
-
 (global-set-key [f9] 'eval-buffer)
 
 
