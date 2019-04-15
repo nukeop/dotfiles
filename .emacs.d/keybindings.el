@@ -44,7 +44,7 @@
 
 ;; Custom functions
 (global-set-key (kbd "C-S-d") 'duplicate-line)
-(global-set-key (kbd "C-S-e") 'eslint-this-file)
+(global-set-key (kbd "C-S-e") 'eslint-fix)
 
 
 ;;Mouse bindings

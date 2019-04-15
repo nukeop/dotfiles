@@ -23,6 +23,7 @@
                      autothemer
                      bind-key
                      emmet-mode
+                     eslint-fix
                      eyebrowse
                      flycheck
                      flycheck-rust
@@ -81,3 +82,7 @@
 (require 'server)
 (autoload 'vc-git-root "vc-git")
 (require 'smartparens-config)
+
+(require 'keyfreq)
+(keyfreq-mode 1)
+(keyfreq-autosave-mode 1)

@@ -36,6 +36,7 @@
   (auto-complete-mode t)
   (rainbow-mode t)
   (add-to-list 'ac-sources 'ac-source-filename)
+  (add-hook 'after-save-hook 'eslint-fix nil t)
   )
 
 (add-hook 'rjsx-mode-hook 'js-modes-hook)
@@ -83,11 +84,5 @@
 (add-hook 'minibuffer-inactive-mode-hook (lambda()
                                   (face-remap-add-relative 'default '(:background "#22252c"))
                                   ))
-
-(add-hook 'after-save-hook (lambda()
-                             (when (eq major-mode 'rjsx-mode)
-                               (eslint-this-file)
-                               )
-                             ))
 
 (provide 'hooks)
