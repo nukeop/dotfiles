@@ -12,19 +12,19 @@
 		  (concat
 		   ;; Left        
        
-		   ;; Eyebrowse mode - workspace number
+		   ;;Eyebrowse mode - workspace number
 		   (eval (when (and (bound-and-true-p eyebrowse-mode)
-				     (< 1 (length (eyebrowse--get 'window-configs))))
+			       (< 1 (length (eyebrowse--get 'window-configs))))
 			    (propertize  (format "  %s  " (int-to-string (eyebrowse--get 'current-slot)))
-					 'face 'mode-blue
-					 )
+			  	 'face 'mode-blue
+			  	 )
 			    )
 			 )
 
 		   ;; Current major mode and its icon
 		   (eval
 		    (let ((mode (format-mode-line " %m ")))
-		      (propertize (concat (mode-icon) mode) 'face
+		      (propertize mode 'face
 				  (cond ((not(eq modeline-selected-window (get-buffer-window))) 'mode-black)
 					((eql buffer-read-only t) 'mode-blue)
 					((buffer-modified-p) 'mode-red)

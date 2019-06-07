@@ -1,17 +1,13 @@
 (defface neo-tree-buffer
   '((t
-     :background "#22252c"
-     :foreground "#ccd4e3"
+     :inherit hl-line
      ))
   "Neotree dark background"
   :group 'basic-faces
   )
 
 (set-face-attribute 'neo-root-dir-face nil
-		    :background "#282c34"
-		    :foreground "#61afef"
-        :box '(:line-width 8 :color "#282c34")
-		    :height 120
+		    :height 100
 		    :weight 'bold
 		    )
 
@@ -44,8 +40,8 @@
 		    )
 
 (set-face-attribute 'neo-tree-buffer nil
-		    :font "Input"
-		    :height 120
+		    :font "Terminus"
+		    :height 100
 		    :weight 'normal
 		    )
 

@@ -8,6 +8,8 @@
 (add-to-list 'auto-mode-alist '("\\.lk12\\'". lua-mode))
 (add-to-list 'auto-mode-alist '("\\.rest\\'". restclient-mode))
 
+(add-to-list 'projectile-globally-ignored-directories "node_modules")
+
 (setq
  ac-disable-faces nil
  ac-auto-start 2
