@@ -7,7 +7,6 @@
 'body':
   'ctrl-c': 'unset!'
   'ctrl-x': 'unset!'
-  'ctrl-v': 'unset!'
   'alt-w': 'core:copy'
   'ctrl-w': 'core:cut'
   'ctrl-y': 'core:paste'
