@@ -12,7 +12,7 @@ then
 fi
 
 OPTIONS=$(ykman oath list)
-LAUNCHER="rofi -dmenu -i -p YubikeyOATH"
+LAUNCHER="rofi -width 20 -lines 8 -dmenu -i -p YubikeyOATH"
 
 option=`echo "${OPTIONS/, TOTP/\n}" | $LAUNCHER`
 code=$(ykman oath code "$option")
