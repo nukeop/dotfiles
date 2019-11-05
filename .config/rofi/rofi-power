@@ -5,13 +5,13 @@
 
 # 2016 Oliver Kraitschy - http://okraits.de
 
-OPTIONS=" Lock\n Reboot\n Power-off\nSuspend"
+OPTIONS=" Lock| Reboot| Power-off|Suspend"
 
 # source configuration or use default values
 if [ -f $HOME/.config/rofi-power/config ]; then
   source $HOME/.config/rofi-power/config
 else
-  LAUNCHER="rofi -width 20 -dmenu -i -lines 4 -p rofi-power"
+  LAUNCHER="rofi -sep | -width 20 -dmenu -i -lines 4 -p rofi-power"
   USE_LOCKER="true"
   LOCKER="betterlockscreen -l blur"
 fi
@@ -21,7 +21,7 @@ if [ ${#1} -gt 0 ]; then
   OPTIONS="Exit window manager\n$OPTIONS"
 fi
 
-option=`echo -e $OPTIONS | $LAUNCHER | awk '{print $1}' | tr -d '\r\n'`
+option=`$LAUNCHER <<< $OPTIONS`
 if [ ${#option} -gt 0 ]
 then
     case $option in
