@@ -5,7 +5,7 @@
 
 # 2016 Oliver Kraitschy - http://okraits.de
 
-OPTIONS=" Lock| Reboot| Power-off|Suspend"
+OPTIONS=" Lock| Reboot| Power-off| Suspend"
 
 # source configuration or use default values
 if [ -f $HOME/.config/rofi-power/config ]; then
