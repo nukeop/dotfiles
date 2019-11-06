@@ -1,3 +1,0 @@
-#!/bin/bash
-
-jira i | grep Progress | awk '{ print $1; }' | xargs
