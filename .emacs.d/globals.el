@@ -73,7 +73,6 @@
 (global-flycheck-mode)
 (global-hl-line-mode 1)
 (global-linum-mode 1)
-(global-wakatime-mode)
 (helm-autoresize-mode 1)
 (helm-mode 1)
 (menu-bar-mode -1)

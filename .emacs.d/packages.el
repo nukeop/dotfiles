@@ -34,6 +34,7 @@
                      json-mode
                      linum-off
                      lua-mode
+                     keyfreq
                      magit
                      markdown-mode
                      neotree
@@ -50,7 +51,6 @@
                      rjsx-mode
                      rust-mode
                      visual-regexp
-                     wakatime-mode
                      web-mode
                      which-key
                      yasnippet
@@ -84,7 +84,6 @@
 (autoload 'rjsx-mode "rjsx-mode")
 (require 'server)
 (autoload 'vc-git-root "vc-git")
-(require 'smartparens-config)
 
 (require 'keyfreq)
 (keyfreq-mode 1)
